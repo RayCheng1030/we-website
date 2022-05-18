@@ -2616,9 +2616,10 @@
                 r.Z)(h, [{
                     key: "onInit",
                     value: function() {
+                        var hash = location.hash.replace("#/", "");
                         var t = this;
                         this.isTop = !0,
-                        P.Z.isSkip = P.Z.isTransitioned || !!location.hash,
+                        P.Z.isSkip = P.Z.isTransitioned || !!hash,
                         P.Z.isSkip || new C,
                         this.lHero = new F,
                         new at,
@@ -2627,7 +2628,7 @@
                         this.lNewsStalker = new B,
                         this.lNewsAccordion = new V,
                         this.lOrder = new ct,
-                        P.Z.isSkip ? location.hash ? (this.isAnchor = !0,
+                        P.Z.isSkip ? hash ? (this.isAnchor = !0,
                         this.isOpeningEnd = !0,
                         this.lHero.visible(),
                         this.lHero.disable(),

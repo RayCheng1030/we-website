@@ -1702,13 +1702,14 @@
                 P.Z)(t, [{
                     key: "init",
                     value: function() {
+                        var hash = location.hash.replace("#/", "");
                         var t = this;
                         if (this.options.isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || "MacIntel" === navigator.platform && navigator.maxTouchPoints > 1 || window.innerWidth < this.tablet.breakpoint,
                         this.options.isTablet = this.options.isMobile && window.innerWidth >= this.tablet.breakpoint,
                         this.smooth && !this.options.isMobile || this.tablet.smooth && this.options.isTablet || this.smartphone.smooth && this.options.isMobile && !this.options.isTablet ? this.scroll = new X(this.options) : this.scroll = new H(this.options),
                         this.scroll.init(),
-                        !this.options.disableHash && window.location.hash) {
-                            var e = window.location.hash.slice(1, window.location.hash.length)
+                        !this.options.disableHash && hash) {
+                            var e = hash.slice(1, hash.length)
                               , i = document.getElementById(e);
                             requestAnimationFrame((function() {
                                 i && t.scroll.scrollTo(i)
@@ -3531,9 +3532,10 @@
                 t = s.Z.cScroll.el,
                 e = (0,
                 S.Ds)((function() {
+                    var hash = location.hash.replace("#/", "");
                     i.unobserve(t),
-                    location.hash ? setTimeout((function() {
-                        s.Z.cScroll.scrollTo(location.hash)
+                    hash ? setTimeout((function() {
+                        s.Z.cScroll.scrollTo(hash)
                     }
                     ), 300) : s.Z.cScroll.scrollToFast(),
                     o.Z.emit("resizeFirst")

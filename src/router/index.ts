@@ -14,6 +14,6 @@ const routes: Array<RouteRecordRaw> = [
 ]
 
 export default createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes,
 });
