@@ -25,7 +25,7 @@
 }
 
 .lHero-titleEn {
-    font-family: Rajdhani,YuGothic,游ゴシック,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-family: Rajdhani,YuGothic,'Noto Sans TC',sans-serif;
     font-weight: 600;
     display: block;
     position: relative;
@@ -85,7 +85,7 @@
 }
 
 .lHeroMouseStalker-text {
-    font-family: Rajdhani,YuGothic,游ゴシック,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-family: Rajdhani,YuGothic,'Noto Sans TC',sans-serif;
     font-weight: 600;
     letter-spacing: .1em;
     position: absolute
@@ -203,7 +203,7 @@
 }
 
 .lNews-accordionMore-text {
-    font-family: Rajdhani,YuGothic,游ゴシック,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-family: Rajdhani,YuGothic,'Noto Sans TC',sans-serif;
     font-weight: 600;
     letter-spacing: .5em;
     line-height: 1;
@@ -263,7 +263,7 @@
 }
 
 .lNewsMouseStalker-text {
-    font-family: Rajdhani,YuGothic,游ゴシック,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-family: Rajdhani,YuGothic,'Noto Sans TC',sans-serif;
     font-weight: 600;
     letter-spacing: .1em;
     position: absolute
@@ -311,7 +311,7 @@
 }
 
 .lOrder-catch {
-    font-family: Rajdhani,YuGothic,游ゴシック,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-family: Rajdhani,YuGothic,'Noto Sans TC',sans-serif;
     font-weight: 600;
     letter-spacing: -.03em;
     text-align: center
@@ -341,7 +341,7 @@
 }
 
 .lOrder-contact-link-font {
-    font-family: Rajdhani,YuGothic,游ゴシック,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-family: Rajdhani,YuGothic,'Noto Sans TC',sans-serif;
     font-weight: 600;
     line-height: 1;
     white-space: nowrap;
@@ -393,7 +393,7 @@
 }
 
 .lOutline-catchEn {
-    font-family: Rajdhani,YuGothic,游ゴシック,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-family: Rajdhani,YuGothic,'Noto Sans TC',sans-serif;
     font-weight: 600;
     letter-spacing: .015em;
     position: relative;
@@ -516,7 +516,7 @@
 }
 
 .lVideoMouseStalker-text {
-    font-family: Rajdhani,YuGothic,游ゴシック,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-family: Rajdhani,YuGothic,'Noto Sans TC',sans-serif;
     font-weight: 600;
     letter-spacing: .1em;
     position: absolute
@@ -911,41 +911,6 @@
         display: none
     }
 
-    .lOutline-bgPhoto.-n1 {
-        left: 68.4375rem;
-        top: 97.3125rem;
-        width: 31.25rem;
-        height: 42.5rem
-    }
-
-    .lOutline-bgPhoto.-n2 {
-        left: 0;
-        top: 142rem;
-        width: 18.375rem;
-        height: 25rem
-    }
-
-    .lOutline-bgPhoto.-n3 {
-        left: 50rem;
-        top: 164.4375rem;
-        width: 43.75rem;
-        height: 32.0625rem
-    }
-
-    .lOutline-bgPhoto.-n4 {
-        left: 0;
-        top: 196.4375rem;
-        width: 31.25rem;
-        height: 42.5rem
-    }
-
-    .lOutline-bgPhoto.-n5 {
-        left: 49.9375rem;
-        top: 224.25rem;
-        width: 18.75rem;
-        height: 25.4375rem
-    }
-
     .lOutlineGallery {
         margin-bottom: calc(35.625rem - 50vh)
     }
@@ -1268,41 +1233,6 @@
 
     .lOutline-text-sp {
         display: inline-block
-    }
-
-    .lOutline-bgPhoto.-n1 {
-        right: 0;
-        top: 54.0625rem;
-        width: 15.625rem;
-        height: 21.25rem
-    }
-
-    .lOutline-bgPhoto.-n2 {
-        left: 0;
-        top: 76.625rem;
-        width: 12.5rem;
-        height: 9.1875rem
-    }
-
-    .lOutline-bgPhoto.-n3 {
-        left: 4rem;
-        top: 87.53125rem;
-        width: 21.875rem;
-        height: 16.03125rem
-    }
-
-    .lOutline-bgPhoto.-n4 {
-        left: 0;
-        top: 109.59375rem;
-        width: 15.625rem;
-        height: 21.25rem
-    }
-
-    .lOutline-bgPhoto.-n5 {
-        left: 16.5rem;
-        top: 134.375rem;
-        width: 9.25rem;
-        height: 12.71875rem
     }
 
     .lOutlineGallery {

@@ -17,6 +17,7 @@ module.exports = {
 
         "no-constant-condition": ["error", { "checkLoops": false }],
         "no-empty": ["warn", { "allowEmptyCatch": true }],
+        "no-irregular-whitespace": "off",
         "max-len": ["warn", { "code": 240, "tabWidth": 4 }],
     },
     overrides: [

@@ -711,10 +711,12 @@
                 r.Z)(h, [{
                     key: "onInit",
                     value: function() {
-                        this.motionCatch1 = new M(this.refs.catch1),
-                        this.motionCatch2 = new M(this.refs.catch2),
-                        this.motionCatch3 = new M(this.refs.catch3),
+                        this.motionCatches = [],
+                        this.motionCatchIndex = 0,
                         this.el.classList.add("-ready")
+
+                        for (let c = this.refs.catch1, i = 1; c; i++, c = this.refs["catch" + i])
+                            this.motionCatches.push(new M(c));
                     }
                 }, {
                     key: "onLoadProgress",
@@ -748,24 +750,17 @@
                                     }
                                     return t.abrupt("return");
                                 case 2:
-                                    return this.isStarted = !0,
-                                    e = .79 * (w.duration + w.staggerAmount),
-                                    this.motionCatch1.show(),
-                                    t.next = 7,
-                                    (0,
-                                    g.D)(e);
-                                case 7:
-                                    return this.motionCatch1.hide(),
-                                    this.motionCatch2.show(),
-                                    t.next = 11,
-                                    (0,
-                                    g.D)(e);
-                                case 11:
-                                    return this.motionCatch2.hide(),
-                                    this.motionCatch3.show(),
-                                    t.next = 15,
-                                    (0,
-                                    g.D)(e - .5);
+                                    if (this.motionCatchIndex === 0) {
+                                        this.isStarted = !0;
+                                        e = .79 * (w.duration + w.staggerAmount);
+                                    }
+                                    else this.motionCatches[this.motionCatchIndex - 1].hide();
+
+                                    this.motionCatches[this.motionCatchIndex++].show();
+
+                                    if (this.motionCatchIndex === this.motionCatches.length)
+                                        return t.next = 15, (0, g.D)(e - .5);
+                                    else return (0, g.D)(e);
                                 case 15:
                                     this.isStartDone = !0,
                                     this.finish();
@@ -786,7 +781,7 @@
                     value: function() {
                         var t = this;
                         this.isLoadDone && this.isStartDone && (y.ZP.delayedCall(.5, (function() {
-                            t.motionCatch3.hide(),
+                            t.motionCatches[t.motionCatchIndex - 1].hide(),
                             t.el.addEventListener("transitionend", (function() {
                                 t.destroy()
                             }
@@ -1590,6 +1585,8 @@
                 r.Z)(n, [{
                     key: "onInit",
                     value: function() {
+                        if (!Array.isArray(this.refs.catchJp))
+                            this.refs.catchJp = [this.refs.catchJp];
                         this.lOutlineCatchEn = new J({
                             context: this.el
                         }),
@@ -1913,8 +1910,8 @@
                                 height: k
                             }
                         }({
-                            text: "THE POWER TO ADVANCE JAPAN’S INFRASTRUCTURE&nbsp;",
-                            fontFamily: "Rajdhani",
+                            text: window.marqueeRing + "&nbsp;",
+                            fontFamily: "Rajdhani,YuGothic,'Noto Sans TC',sans-serif",
                             fontSize: H(2 * n),
                             fontWeight: "600",
                             offsetY: 3

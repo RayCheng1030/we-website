@@ -2487,7 +2487,7 @@
                 }, {
                     key: "onLoadDone",
                     value: function() {
-                        v(pt(this.isSp ? "images/common/sp/2x/menu_bgimg@2x.jpg" : "images/common/pc/2x/menu_bgimg@2x.jpg"))
+                        v(pt(this.isSp ? window.menuBgSrc[1] : window.menuBgSrc[0]))
                     }
                 }, {
                     key: "onOpenModal",
@@ -2549,7 +2549,7 @@
                 uSpeedMax: m.Z.isSp ? .007 : .01,
                 uSpeedMin: m.Z.isSp ? 7e-4 : .001
             }
-              , xt = pt("images/common/ray.jpg")
+              , xt = pt(window.rayImageSrc)
               , St = function(t) {
                 (0,
                 A.Z)(s, t);

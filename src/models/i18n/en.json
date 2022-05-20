@@ -1,0 +1,112 @@
+{
+    "navigation": {
+        "menu": "MENU",
+        "outline": "OUTLINE",
+        "news": "NEWS",
+        "order": "ORDER"
+    },
+    "header": {
+        "title": [
+            "MOVING",
+            "SOCIETY",
+            "FORWARD"
+        ],
+        "subtitle": "Secure domestic drone that supports the future",
+        "sign": "Autonomous Control Systems Laboratory"
+    },
+    "outline": {
+        "title": [
+            "THE POWER TO ADVANCE",
+            "JAPAN'S INFRASTRUCTURE"
+        ],
+        "subtitle": "The Power to Evolve Japan's Social Infrastructure.",
+        "content": [
+            [
+                "'Eyes' that make the space",
+                "closer and freer to the sky",
+                "that we want to deliver..."
+            ],
+            [
+                "We have created it with the hope",
+                "that people will be able",
+                "to work closely and be supported",
+                "in order to achieve economic growth",
+                "with a sense of satisfaction.",
+                "Drones are partners who bring safety and efficiency."
+            ],
+            [
+                "A domestic drone optimized by combining all technologies",
+                "such as control, body, communication,",
+                "camera, propeller, and security.",
+                "Your new partner will be born."
+            ]
+        ]
+    },
+    "news": {
+        "articles": [
+            {
+                "date": "DEC. 7",
+                "year": "2021",
+                "summary": "Started accepting orders for secure small aerial drone 'SOTEN'",
+                "href": "https://www.acsl.co.jp/drone-soten/news/2089",
+                "image": "2021-12-07.png"
+            },
+            {
+                "date": "11 月 8 日",
+                "year": "2021",
+                "summary": "Video broadcast on BBC WORLD NEWS released on ACSL official YouTube",
+                "href": "https://www.acsl.co.jp/drone-soten/news/2019",
+                "image": "2021-11-08.png"
+            },
+            {
+                "date": "11 月 1 日",
+                "year": "2021",
+                "summary": "'Secure domestic drone that supports the future' teaser site released Finally sales start in Dec. 2021",
+                "href": "https://www.acsl.co.jp/drone-soten/news/2007",
+                "image": "2021-11-01.png"
+            }
+        ]
+    },
+    "order": {
+        "title": [
+            "DEC 2021",
+            "RELEASE"
+        ],
+        "subtitle": [
+            "Please Contact",
+            "Your Distributor Directly."
+        ],
+        "link": {
+            "top": [
+                {
+                    "title": "PURCHASE FLOW",
+                    "href": "https://product.acsl.co.jp/flow/"
+                }
+            ],
+            "bottom": [
+                {
+                    "title": "PRODUCT DETAIL",
+                    "href": "https://product.acsl.co.jp/product/post-369/"
+                },
+                {
+                    "title": "CONTACT US",
+                    "href": "https://www.acsl.co.jp/contact/"
+                }
+            ]
+        }
+    },
+    "marquee": {
+        "bottom": [
+            "DEC 2021 RELEASE",
+            "OTHER MESSAGE"
+        ],
+        "ring": "THE POWER TO ADVANCE JAPAN'S INFRASTRUCTURE"
+    },
+    "button": {
+        "fullMovie": "FULL MOVIE",
+        "more": "MORE",
+        "load": "LOAD MORE",
+        "close": "CLOSE"
+    },
+    "rights": "© ACSL All Rights Reserved."
+}

@@ -15,6 +15,12 @@ declare namespace NodeJS {
     }
 }
 
+declare interface Window {
+    marqueeRing: string;
+    rayImageSrc: string;
+    menuBgSrc: [desktop: string, mobile: string];
+}
+
 declare type Index = string | number;
 declare type Primitive = Index | boolean;
 declare type LiteralBoolean = "false" | "true";
