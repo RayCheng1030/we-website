@@ -75,17 +75,20 @@ watch(locale, updateLocale);
 window.rayImageSrc = require(`@/assets/images/ray.jpg`);
 window.menuBgSrc = [require(`@/assets/images/menu/bg.jpg`), require(`@/assets/images/menu/bg-mobile.jpg`)];
 
-onMounted(() => {
+onMounted(async () => {
     const head = document.getElementsByTagName("head")[0];
-    const libs = ["vendor", "pace.min", "main", "index"];
+    const libs = ["vendor", "pace.min", "index", "main"];
 
     for (const lib of libs) {
-        const script = document.createElement("script");
+        await new Promise(resolve => {
+            const script = document.createElement("script");
 
-        script.defer = true;
-        script.src = `./libs/${ lib }.js?v=4`;
+            script.defer = true;
+            script.src = `./libs/${ lib }.js?v=4`;
+            script.onload = resolve;
 
-        head.appendChild(script);
+            head.appendChild(script);
+        });
     }
 });
 </script>
