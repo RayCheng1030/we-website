@@ -32,5 +32,17 @@
 </script>
 
 <style lang="scss">
+@include desktop {
+    .cHeader-logo-image {
+        width: calc(6rem * 1.5);
+        height: calc(2.3rem * 1.5);
+    }
+}
 
+@include mobile {
+    .cHeader-logo-image {
+        width: calc(6rem * 1.35);
+        height: calc(2.3rem * 1.35);
+    }
+}
 </style>

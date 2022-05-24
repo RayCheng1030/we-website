@@ -52,7 +52,7 @@ const marquee = computed(() => getI18nList(`marquee.bottom`));
 </script>
 
 <style lang="scss">
-@media screen and (max-width: 768px) {
+@include mobile {
     .lHero-titleWord {
         @include full-width;
     }

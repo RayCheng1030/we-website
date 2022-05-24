@@ -24,7 +24,10 @@
             [
                 "'Eyes' that make the space",
                 "closer and freer to the sky",
-                "that we want to deliver..."
+                "that we want to deliver...",
+                "Some...",
+                "Some...",
+                "Some..."
             ],
             [
                 "We have created it with the hope",
@@ -32,13 +35,15 @@
                 "to work closely and be supported",
                 "in order to achieve economic growth",
                 "with a sense of satisfaction.",
-                "Drones are partners who bring safety and efficiency."
+                "Drones are partners who bring safety and efficiency",
+                "to your business and give you time to improve the future."
             ],
             [
                 "A domestic drone optimized by combining all technologies",
                 "such as control, body, communication,",
                 "camera, propeller, and security.",
-                "Your new partner will be born."
+                "Your new partner will be born.",
+                "Welcome"
             ]
         ]
     },
@@ -74,7 +79,8 @@
         ],
         "subtitle": [
             "Please Contact",
-            "Your Distributor Directly."
+            "Your Distributor Directly.",
+            ""
         ],
         "link": {
             "top": [
@@ -97,10 +103,20 @@
     },
     "marquee": {
         "bottom": [
-            "DEC 2021 RELEASE",
-            "OTHER MESSAGE"
+            "世界捕魚",
+            "世界杯",
+            "世界老虎機",
+            "世界彩",
+            "區塊鏈",
+            "世界真人",
+            "亞洲廳",
+            "澳門廳",
+            "泰國廳",
+            "真人秀",
+            "中國紅",
+            "維蜜廳"
         ],
-        "ring": "THE POWER TO ADVANCE JAPAN'S INFRASTRUCTURE"
+        "ring": "Live 真人 ｜ 區塊鏈 ｜ 彩票 ｜ 捕魚 ｜ 世界杯 ｜ 老虎機 ｜ "
     },
     "button": {
         "fullMovie": "FULL MOVIE",
@@ -108,5 +124,5 @@
         "load": "LOAD MORE",
         "close": "CLOSE"
     },
-    "rights": "© ACSL All Rights Reserved."
+    "rights": "© WORLD ENTERTAINMENT 2022 All Rights Reserved."
 }
