@@ -2,11 +2,7 @@
     <header class="cHeader" data-el="cHeader">
         <div class="cHeader-main">
             <p class="cHeader-text">{{ $t("header.sign") }}</p>
-            <a class="cHeader-logo" href="/">
-                <p>
-                    <img class="cHeader-logo-image" :src="require(`@/assets/images/sign.png`)" alt="Sign">
-                </p>
-            </a>
+            <LogoSign target="cHeader" />
         </div>
         <nav class="cHeader-nav">
             <ul class="cHeader-list">
@@ -28,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-
+import LogoSign from "@/views/comps/LogoSign.vue";
 </script>
 
 <style lang="scss">

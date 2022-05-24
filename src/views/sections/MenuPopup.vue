@@ -5,11 +5,7 @@
             <div class="cModal-close" data-modal-close>
                 <span data-ref="cMenu-cHoverOverlap">{{ $t("button.close") }}</span>
             </div>
-            <a class="cMenu-logo" href="/">
-                <p>
-                    <img class="cMenu-logo-image" src="images/common/c-logoEN.svg" alt="ACSL" loading="lazy">
-                </p>
-            </a>
+            <LogoSign target="cMenu" />
             <div class="cMenu-group">
                 <a class="cMenu-item" href="/#outline" data-ref>
                     <span class="cMenu-item-line -top">
@@ -54,6 +50,7 @@
 import { isMobile } from "@/models/util";
 import { onMounted, ref } from "vue";
 
+import LogoSign from "@/views/comps/LogoSign.vue";
 import BottomMarquee from "@/views/comps/BottomMarquee.vue";
 
 const menuBg = ref(null as HTMLDivElement | null);
@@ -62,3 +59,19 @@ onMounted(() => {
     menuBg.value && (menuBg.value.style.backgroundImage = `url(${ window.menuBgSrc[isMobile() ? 1 : 0] })`);
 });
 </script>
+
+<style lang="scss">
+@include desktop {
+    .cMenu-logo-image {
+        width: calc(6rem * 1.5);
+        height: calc(2.3rem * 1.5);
+    }
+}
+
+@include mobile {
+    .cMenu-logo-image {
+        width: calc(6rem * 1.35);
+        height: calc(2.3rem * 1.35);
+    }
+}
+</style>
