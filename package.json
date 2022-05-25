@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "markdown-it": "^13.0.1",
     "mitt": "^3.0.0",
     "vue": "^3.2.13",
     "vue-i18n": "^9.1.10",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
+    "@types/markdown-it": "^12.2.3",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",
