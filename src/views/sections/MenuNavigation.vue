@@ -1,5 +1,5 @@
 <template>
-    <header class="cHeader" data-el="cHeader">
+    <header :class="`cHeader ${ route.name !== `home` && `opacity-100` }`" data-el="cHeader">
         <div class="cHeader-main">
             <p class="cHeader-text">{{ $t("header.sign") }}</p>
             <LogoSign target="cHeader" />
@@ -24,10 +24,18 @@
 </template>
 
 <script setup lang="ts">
+import { useRoute } from "vue-router";
+
 import LogoSign from "@/views/comps/LogoSign.vue";
+
+const route = useRoute();
 </script>
 
 <style lang="scss">
+.opacity-100 {
+    opacity: 100;
+}
+
 @include desktop {
     .cHeader-logo-image {
         width: calc(6rem * 1.5);

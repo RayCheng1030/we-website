@@ -50,27 +50,56 @@
     "news": {
         "articles": [
             {
-                "date": "DEC. 7",
-                "year": "2021",
-                "summary": "Started accepting orders for secure small aerial drone 'SOTEN'",
-                "href": "https://www.acsl.co.jp/drone-soten/news/2089",
+                "date": "AUG. 1",
+                "year": "2022",
+                "summary": "WE APP Coming Soon » Has a new interface and adds many other new functions",
+                "href": "introduce",
                 "image": "2021-12-07.png"
             },
             {
-                "date": "11 月 8 日",
-                "year": "2021",
-                "summary": "Video broadcast on BBC WORLD NEWS released on ACSL official YouTube",
-                "href": "https://www.acsl.co.jp/drone-soten/news/2019",
+                "date": "JUL. 1",
+                "year": "2022",
+                "summary": "World Fishing Coming Soon » The latest 3D technology allows you to swim fast",
+                "href": "new-product",
                 "image": "2021-11-08.png"
             },
             {
-                "date": "11 月 1 日",
-                "year": "2021",
-                "summary": "'Secure domestic drone that supports the future' teaser site released Finally sales start in Dec. 2021",
+                "date": "JUN. 1",
+                "year": "2022",
+                "summary": "Fortune-God Baccarat Coming Soon » Lucky 5 × 5 bonus, double your prize when winning",
                 "href": "https://www.acsl.co.jp/drone-soten/news/2007",
                 "image": "2021-11-01.png"
             }
-        ]
+        ],
+        "pages": {
+            "introduce": {
+                "date": "2022.8.1",
+                "title": "WE APP Coming Soon » Has a new interface and adds many other new functions",
+                "image": "2021-12-07.png",
+                "content": [
+                    "**【Introduce】**",
+                    "1st paragraph — The new interface has been revised, adding a new chat system, collecting card tables, following dealers, and other unique functions.",
+                    "2nd paragraph — The new interface has been revised, adding a new chat system, collecting card tables, following dealers, and other unique functions.",
+                    "",
+                    "**【Others】**",
+                    "3nd paragraph — The new interface has been revised, adding a new chat system, collecting card tables, following dealers, and other unique functions."
+                ]
+            },
+            "new-product": {
+                "date": "2022.7.1",
+                "title": "World Fishing Coming Soon » The latest 3D technology allows you to swim fast",
+                "image": "2021-11-08.png",
+                "content": [
+                    "**【World Fishing】**",
+                    "1st paragraph — The latest 3D technology lets you swim fast on different devices, which is guaranteed to be an eye-opener.",
+                    "",
+                    "**【Others】**",
+                    "2nd paragraph — The latest 3D technology lets you swim fast on different devices, which is guaranteed to be an eye-opener.",
+                    "3rd paragraph — The latest 3D technology lets you swim fast on different devices, which is guaranteed to be an eye-opener.",
+                    "4th paragraph — The latest 3D technology lets you swim fast on different devices, which is guaranteed to be an eye-opener."
+                ]
+            }
+        }
     },
     "order": {
         "title": [
@@ -122,7 +151,8 @@
         "fullMovie": "FULL MOVIE",
         "more": "MORE",
         "load": "LOAD MORE",
-        "close": "CLOSE"
+        "close": "CLOSE",
+        "back": "BACK TO LIST"
     },
     "rights": "© WORLD ENTERTAINMENT 2022 All Rights Reserved."
 }

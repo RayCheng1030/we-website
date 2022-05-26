@@ -1,12 +1,29 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from "vue-router";
 import i18n from "@/models/i18n";
+import HomePage from "@/views/pages/HomePage.vue";
+import ArticlePage from "@/views/pages/ArticlePage.vue";
 
-const routes: Array<RouteRecordRaw> = []
+const routes: Array<RouteRecordRaw> = [
+    {
+        path: "/",
+        alias: ["/outline", "/news", "/order"],
+        name: "home",
+        component: HomePage,
+    },
+    {
+        path: "/article/:id",
+        name: "article",
+        component: ArticlePage,
+    },
+];
 
+const hashMode = true;
 const router = createRouter({
-    history: createWebHashHistory(),
+    history: hashMode ? createWebHashHistory() : createWebHistory(),
     routes,
 });
+
+window.routes = ["/article"];
 
 router.beforeEach(to => {
     if (to.query.lang) {
@@ -14,11 +31,14 @@ router.beforeEach(to => {
         localStorage.setItem("lang", i18n.global.locale);
     }
     else i18n.global.locale = localStorage.getItem("lang") || "zht";
-
-    sessionStorage.clear();
-
-    if (to.fullPath !== "/")
-        window.location.href = "/";
+});
+router.afterEach(to => {
+    if (sessionStorage.getItem("site-loaded"))
+        sessionStorage.clear();
+    else {
+        sessionStorage.setItem("site-loaded", "true");
+        window.location.reload();
+    }
 });
 
 export default router;

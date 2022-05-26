@@ -16,6 +16,7 @@ declare namespace NodeJS {
 }
 
 declare interface Window {
+    routes: string[];
     marqueeRing: string;
     rayImageSrc: string;
     menuBgSrc: [desktop: string, mobile: string];

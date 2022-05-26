@@ -2613,7 +2613,7 @@
                 r.Z)(h, [{
                     key: "onInit",
                     value: function() {
-                        var hash = location.hash.replace("#/", "");
+                        var hash = !window.routes.some(route => location.hash.startsWith("#" + route)) && location.hash.match(/^#\/\w+/) ? location.hash.replace("#/", "#") : "";
                         var t = this;
                         this.isTop = !0,
                         P.Z.isSkip = P.Z.isTransitioned || !!hash,

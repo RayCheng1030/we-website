@@ -1702,7 +1702,7 @@
                 P.Z)(t, [{
                     key: "init",
                     value: function() {
-                        var hash = location.hash.replace("#/", "");
+                        var hash = !window.routes.some(route => location.hash.startsWith("#" + route)) && location.hash.match(/^#\/\w+/) ? location.hash.replace("#/", "#") : "";
                         var t = this;
                         if (this.options.isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || "MacIntel" === navigator.platform && navigator.maxTouchPoints > 1 || window.innerWidth < this.tablet.breakpoint,
                         this.options.isTablet = this.options.isMobile && window.innerWidth >= this.tablet.breakpoint,
@@ -3532,7 +3532,7 @@
                 t = s.Z.cScroll.el,
                 e = (0,
                 S.Ds)((function() {
-                    var hash = location.hash.replace("#/", "");
+                    var hash = !window.routes.some(route => location.hash.startsWith("#" + route)) && location.hash.match(/^#\/\w+/) ? location.hash.replace("#/", "#") : "";
                     i.unobserve(t),
                     hash ? setTimeout((function() {
                         s.Z.cScroll.scrollTo(hash)
