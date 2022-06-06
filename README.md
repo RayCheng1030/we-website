@@ -60,5 +60,15 @@
         - `src/assets/videos/background.mp4` 是用於背景的影片，靜音
         - `src/assets/videos/full.mp4` 是點擊 FULL MOVIE 跳出的完整影片
 
+6. 撰寫文章
+    - 參考語系文件中的 `news.articles.href`
+      - 當其開頭為非 http 協定的任意字詞時，會自動對應語系的 `news.pages` 下的相同字詞
+        - 如 `href` 為 `introduce` 時，自動對應 `news.pages.introduce` 下的資料作為文章顯示
+      - 文章所需的資料有四項：
+        - `date`：日期文字，但可填入非日期的文字，會顯示於主標題上方
+        - `title`：主標題，僅支援單行
+        - `image`：對應圖像的資料夾位於 `src/assets/images/articles`
+        - `content`：文章內文，支援多行 (以陣列形式表示每個段落) 與 Markdown 語法
+
 ## References
 * https://www.acsl.co.jp/drone-soten/
