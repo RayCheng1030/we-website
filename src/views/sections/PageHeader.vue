@@ -3,13 +3,13 @@
         <div class="lHero-title">
         <div class="lHero-titleInner" data-ref>
             <h1 class="lHero-titleMain" data-ref>
-                <span class="lHero-titleEn" data-ref aria-hidden="true">
+                <span class="lHero-titleMajor" data-ref aria-hidden="true">
                     <span v-for="(text, i) in title" :key="i" class="lHero-titleWord">{{ text }}&nbsp;</span>
                 </span>
-                <span class="lHero-titleEn -flicker" data-ref="titleEnFlicker">
+                <span class="lHero-titleMajor -flicker" data-ref="titleMajorFlicker">
                     <span v-for="(text, i) in title" :key="i" class="lHero-titleWord">{{ text }}&nbsp;</span>
                 </span>
-                <span class="lHero-titleJp" data-ref>{{ $t(`header.subtitle`) }}</span>
+                <span class="lHero-titleSub" data-ref>{{ $t(`header.subtitle`) }}</span>
             </h1>
             <p class="lHero-logo" data-ref>
                 <span>

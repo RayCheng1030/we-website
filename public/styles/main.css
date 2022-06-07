@@ -24,7 +24,7 @@
     position: relative;
 }
 
-.lHero-titleEn {
+.lHero-titleMajor {
     font-family: Rajdhani, YuGothic, 'Noto Sans TC', sans-serif;
     font-weight: 600;
     display: block;
@@ -33,7 +33,7 @@
     line-height: .95455;
 }
 
-.lHero-titleEn.-flicker {
+.lHero-titleMajor.-flicker {
     position: absolute;
     top: 0;
     right: 0;
@@ -42,7 +42,7 @@
     color: #707279;
 }
 
-.lHero-titleJp {
+.lHero-titleSub {
     display: block;
     line-height: 1.3125;
 }
@@ -392,7 +392,7 @@
     z-index: 2;
 }
 
-.lOutline-catchEn {
+.lOutline-catchMajor {
     font-family: Rajdhani, YuGothic, 'Noto Sans TC', sans-serif;
     font-weight: 600;
     letter-spacing: .015em;
@@ -407,12 +407,12 @@
     height: auto;
 }
 
-.lOutline-catchJp {
+.lOutline-catchSub {
     letter-spacing: .12em;
     position: relative;
 }
 
-.lOutline-catchJp-line {
+.lOutline-catchSub-line {
     position: absolute;
     left: 0;
     right: 0;
@@ -421,7 +421,7 @@
     overflow: hidden;
 }
 
-.lOutline-catchJp-line:after {
+.lOutline-catchSub-line:after {
     content: "";
     background: linear-gradient(90deg, rgba(193, 196, 203, 0) 0, rgba(193, 196, 203, .3) 50%, rgba(193, 196, 203, 0));
     position: absolute;
@@ -436,7 +436,7 @@
     animation-play-state: paused;
 }
 
-.lOutline-catchJp.-show .lOutline-catchJp-line:after {
+.lOutline-catchSub.-show .lOutline-catchSub-line:after {
     animation-play-state: running;
 }
 
@@ -733,13 +733,13 @@
         margin-top: -1.5rem
     }
 
-    .lHero-titleEn {
+    .lHero-titleMajor {
         font-size: 3rem;
         letter-spacing: .055em;
         margin-left: -.25rem
     }
 
-    .lHero-titleJp {
+    .lHero-titleSub {
         font-size: 1rem;
         letter-spacing: .2em;
         margin-top: 1.5rem;
@@ -1019,7 +1019,7 @@
         margin: 0 6.25rem
     }
 
-    .lOutline-catchEn {
+    .lOutline-catchMajor {
         font-size: 4.5rem;
         line-height: 1.13333;
         margin-top: 46.375rem
@@ -1031,27 +1031,27 @@
         width: 92.5rem
     }
 
-    .lOutline-catchJp {
+    .lOutline-catchSub {
         font-size: 3rem;
         margin: 37.3125rem 6.25rem 0;
         text-align: center;
         line-height: .8
     }
 
-    .lOutline-catchJp-line.-top {
+    .lOutline-catchSub-line.-top {
         top: -4px;
         transform: scaleX(-1)
     }
 
-    .lOutline-catchJp-line.-bottom {
+    .lOutline-catchSub-line.-bottom {
         bottom: -2px
     }
 
-    .lOutline-catchJp.-pc {
+    .lOutline-catchSub.-pc {
         display: block
     }
 
-    .lOutline-catchJp.-sp {
+    .lOutline-catchSub.-sp {
         display: none
     }
 
@@ -1368,13 +1368,13 @@
         margin-top: -2.125rem
     }
 
-    .lHero-titleEn {
+    .lHero-titleMajor {
         font-size: 2.5rem;
         letter-spacing: .01em;
         margin-left: -.1875rem
     }
 
-    .lHero-titleJp {
+    .lHero-titleSub {
         font-size: 0.5rem;
         letter-spacing: .12em;
         margin-top: .9375rem;
@@ -1576,7 +1576,7 @@
         margin: 0 2.15625rem
     }
 
-    .lOutline-catchEn {
+    .lOutline-catchMajor {
         font-size: 2.5rem;
         line-height: 1.125;
         margin-top: 24.6875rem
@@ -1587,30 +1587,30 @@
         width: 100%
     }
 
-    .lOutline-catchJp {
+    .lOutline-catchSub {
         font-size: 1.78125rem;
         margin: 20.625rem 2.15625rem 0;
         text-align: left;
         line-height: 1.45614
     }
 
-    .lOutline-catchJp-line.-top {
+    .lOutline-catchSub-line.-top {
         top: 4px
     }
 
-    .lOutline-catchJp-line.-bottom {
+    .lOutline-catchSub-line.-bottom {
         bottom: 4px
     }
 
-    .lOutline-catchJp.-spLineAfter {
+    .lOutline-catchSub.-spLineAfter {
         margin: .1875rem 2.15625rem 0
     }
 
-    .lOutline-catchJp.-pc {
+    .lOutline-catchSub.-pc {
         display: none
     }
 
-    .lOutline-catchJp.-sp {
+    .lOutline-catchSub.-sp {
         display: block
     }
 

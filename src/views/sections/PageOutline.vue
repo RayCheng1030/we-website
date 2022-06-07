@@ -5,16 +5,16 @@
             <span class="cTitle-line -bottom"></span>
             {{ $t("navigation.outline") }}
         </h2>
-        <p class="lOutline-catchEn" data-el data-scroll data-scroll-call="lOutline-catchEn">
+        <p class="lOutline-catchMajor" data-el data-scroll data-scroll-call="lOutline-catchMajor">
             <span v-for="(text, i) in title" :key="i">{{ text }}&nbsp;<br></span>
         </p>
         <picture>
             <source media="(max-width: 767px)" :srcset="require(`@/assets/images/outline/main.png`)">
             <img class="lOutline-image" alt="" loading="lazy" data-ref data-scroll data-scroll-speed="-3" :src="require(`@/assets/images/outline/main.png`)" :width="main.width">
         </picture>
-        <p class="lOutline-catchJp" data-ref data-scroll data-scroll-call="lOutline-catchJp">
-            <span class="lOutline-catchJp-line -top"></span>
-            <span class="lOutline-catchJp-line -bottom"></span>
+        <p class="lOutline-catchSub" data-ref data-scroll data-scroll-call="lOutline-catchSub">
+            <span class="lOutline-catchSub-line -top"></span>
+            <span class="lOutline-catchSub-line -bottom"></span>
             {{ $t("outline.subtitle") }}
         </p>
         <div class="lOutline-text" data-el data-scroll data-scroll-call="lOutline-text-p">
@@ -47,7 +47,7 @@ const content = computed(() => getI18nList(`outline.content`, `0`).map((v, i) =>
 </script>
 
 <style lang="scss">
-.lOutline-catchEn {
+.lOutline-catchMajor {
     .mOverlap {
         display: block !important;
 
