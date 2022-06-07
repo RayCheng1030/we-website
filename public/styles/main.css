@@ -734,13 +734,13 @@
     }
 
     .lHero-titleEn {
-        font-size: 4.0625rem;
+        font-size: 3rem;
         letter-spacing: .055em;
         margin-left: -.25rem
     }
 
     .lHero-titleJp {
-        font-size: 1.5rem;
+        font-size: 1rem;
         letter-spacing: .2em;
         margin-top: 1.5rem;
         margin-left: -.0625rem
@@ -883,7 +883,7 @@
     }
 
     .lOrder-catch {
-        font-size: 22.9375rem;
+        font-size: 4.5em;
         line-height: .95041
     }
 
@@ -1020,7 +1020,7 @@
     }
 
     .lOutline-catchEn {
-        font-size: 7.5rem;
+        font-size: 4.5rem;
         line-height: 1.13333;
         margin-top: 46.375rem
     }
@@ -1369,13 +1369,13 @@
     }
 
     .lHero-titleEn {
-        font-size: 3.4375rem;
+        font-size: 2.5rem;
         letter-spacing: .01em;
         margin-left: -.1875rem
     }
 
     .lHero-titleJp {
-        font-size: 1rem;
+        font-size: 0.5rem;
         letter-spacing: .12em;
         margin-top: .9375rem;
         margin-left: -.0625rem
@@ -1485,7 +1485,7 @@
     }
 
     .lOrder-catch {
-        font-size: 5.875rem;
+        font-size: 2.5rem;
         line-height: .95
     }
 
