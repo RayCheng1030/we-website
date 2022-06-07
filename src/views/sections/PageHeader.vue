@@ -13,7 +13,8 @@
             </h1>
             <p class="lHero-logo" data-ref>
                 <span>
-                    <img class="lHero-logo-img" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo.png`)" />
+                    <img class="lHero-logo-img -main" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo-main.png`)" />
+                    <img class="lHero-logo-img -border" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo-border.png`)" />
                 </span>
             </p>
         </div>
@@ -52,9 +53,40 @@ const marquee = computed(() => getI18nList(`marquee.bottom`));
 </script>
 
 <style lang="scss">
+.lHero-logo .mOverlap .mOverlap-line {
+    width: 6.5rem;
+    height: 6.5rem;
+
+    .lHero-logo-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &.-border {
+            animation: spin 5s ease-out infinite;
+        }
+    }
+}
+
 @include mobile {
     .lHero-titleWord {
         @include full-width;
+    }
+    .lHero-logo .mOverlap .mOverlap-line {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+@keyframes spin {
+    0%, 90% {
+        transform: scale(1) rotate(0deg);
+    }
+    92.5% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
     }
 }
 </style>
