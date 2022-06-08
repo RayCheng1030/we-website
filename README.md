@@ -70,5 +70,12 @@
         - `image`：對應圖像的資料夾位於 `src/assets/images/articles`
         - `content`：文章內文，支援多行 (以陣列形式表示每個段落) 與 Markdown 語法
 
+7. 影片播放按鈕
+    - 原特效參考 (https://www.elegantseagulls.com/) 是使用圖像，但考慮到有替換文字的需求，故改用 SVG
+        - 語系文件中的 `button.fullMovie.text` 可替換中間的文字
+            - 目前僅支援一個全形字，若有多個字的需求，需以 `button.fullMovie.textLeft` 調整 x 軸位置 (單位：px)
+        - 語系文件中的 `button.fullMovie.border` 可替換外圍的文字
+            - 由於 SVG 本身限制，需以 `button.fullMovie.borderSize` 調整其文字大小 (單位：px)
+
 ## References
 * https://www.acsl.co.jp/drone-soten/

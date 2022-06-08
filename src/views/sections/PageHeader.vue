@@ -22,21 +22,18 @@
         <BottomMarquee target="lHero" :texts="marquee" />
         <video class="lHero-video" :src="require(`@/assets/videos/background.mp4`)" muted loop playsinline autoplay data-ref></video>
         <div class="lHeroMouseStalker" data-el="cMouseStalker">
-            <div class="lHeroMouseStalker-text" data-ref="cMouseStalker-text">{{ $t("button.fullMovie") }}</div>
-            <div class="lHeroMouseStalker-shape -normal" data-ref="cMouseStalker-shapeNormal">
-                <div class="lHeroMouseStalker-side -left"></div>
-                <div class="lHeroMouseStalker-side -top"></div>
-                <div class="lHeroMouseStalker-side -bottom"></div>
-            </div>
-            <div class="lHeroMouseStalker-shape -accent" data-ref="cMouseStalker-shapeAccent">
-                <div class="lHeroMouseStalker-side -left"></div>
-                <div class="lHeroMouseStalker-side -top"></div>
-                <div class="lHeroMouseStalker-side -bottom"></div>
-            </div>
+            <div class="lHeroMouseStalker-text" data-ref="cMouseStalker-text" :style="`left: calc(50% + ${ $t(`button.fullMovie.textLeft`) }px)`">{{ $t("button.fullMovie.text") }}</div>
+            <div class="lHeroMouseStalker-shape -normal" data-ref="cMouseStalker-shapeNormal" style="display: none" />
+            <div class="lHeroMouseStalker-shape -accent" data-ref="cMouseStalker-shapeAccent" style="display: none" />
             <div class="lHeroMouseStalker-shape -theme" data-ref="cMouseStalker-shapeTheme">
-                <div class="lHeroMouseStalker-side -left"></div>
-                <div class="lHeroMouseStalker-side -top"></div>
-                <div class="lHeroMouseStalker-side -bottom"></div>
+                <svg class="lHeroMouseStalker-circle" viewBox="0 0 100 100" width="100" height="100">
+                    <defs>
+                        <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+                    </defs>
+                    <text :font-size="$t(`button.fullMovie.borderSize`)">
+                        <textPath xlink:href="#circle">{{ $t("button.fullMovie.border").replace(/ /g, "&nbsp;") }}</textPath>
+                    </text>
+                </svg>
             </div>
         </div>
     </a>
@@ -67,6 +64,25 @@ const marquee = computed(() => getI18nList(`marquee.bottom`));
         }
     }
 }
+.lHeroMouseStalker {
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+
+    .lHeroMouseStalker-text {
+        left: calc(50% - 10px);
+        font-size: 20px;
+    }
+    .lHeroMouseStalker-circle {
+        height: auto;
+        width: 100px;
+
+        fill: #c1c4cb;
+        transform-origin: center;
+
+        animation: revolve 7.5s linear infinite;
+    }
+}
 
 @include mobile {
     .lHero-titleWord {
@@ -75,6 +91,13 @@ const marquee = computed(() => getI18nList(`marquee.bottom`));
     .lHero-logo .mOverlap .mOverlap-line {
         width: 3.5rem;
         height: 3.5rem;
+    }
+    .lHeroMouseStalker {
+        transform: translate(0%, 0%);
+
+        .lHeroMouseStalker-text {
+            top: calc(50% - 10px);
+        }
     }
 }
 
@@ -87,6 +110,14 @@ const marquee = computed(() => getI18nList(`marquee.bottom`));
     }
     100% {
         transform: scale(1) rotate(360deg);
+    }
+}
+@keyframes revolve {
+    0% {
+        transform: translate(-2.5%, -2.5%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-2.5%, -2.5%) rotate(360deg);
     }
 }
 </style>

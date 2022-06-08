@@ -157,7 +157,12 @@
         "ring": "真人 WE 區塊鏈 WE 彩票 WE 捕魚 WE 世界杯 WE 老虎機 WE"
     },
     "button": {
-        "fullMovie": "完整影片",
+        "fullMovie": {
+            "text": "▶",
+            "textLeft": "-10",
+            "border": "WORLD ENTERTAINMENT    WORLD ENTERTAINMENT",
+            "borderSize": "8.5"
+        },
         "more": "查看",
         "load": "載入更多",
         "close": "關閉",
