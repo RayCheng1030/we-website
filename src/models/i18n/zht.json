@@ -163,6 +163,7 @@
             "border": "WORLD ENTERTAINMENT    WORLD ENTERTAINMENT",
             "borderSize": "8.5"
         },
+        "sound": "開關音樂",
         "more": "查看",
         "load": "載入更多",
         "close": "關閉",

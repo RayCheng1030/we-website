@@ -11,7 +11,7 @@
     <div data-permanent>
         <MenuNavigation />
         <MenuPopup />
-
+        <SoundToggle />
         <canvas class="cRay" data-el></canvas>
         <canvas class="cRayBackground" data-el></canvas>
         <canvas class="cCylinder" data-el></canvas>
@@ -24,6 +24,7 @@ import { useI18n } from "vue-i18n";
 
 import MenuNavigation from "@/views/sections/MenuNavigation.vue";
 import MenuPopup from "@/views/sections/MenuPopup.vue";
+import SoundToggle from "@/views/sections/SoundToggle.vue";
 
 const { t, locale } = useI18n();
 

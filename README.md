@@ -77,5 +77,9 @@
         - 語系文件中的 `button.fullMovie.border` 可替換外圍的文字
             - 由於 SVG 本身限制，需以 `button.fullMovie.borderSize` 調整其文字大小 (單位：px)
 
+8. 背景音樂
+    - 因瀏覽器限制，音樂預設為關閉
+    - 音樂檔位置：`src/assets/sounds/sounds.mp3`
+
 ## References
 * https://www.acsl.co.jp/drone-soten/

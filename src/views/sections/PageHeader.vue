@@ -1,23 +1,24 @@
 <template>
     <a class="lHero" data-el data-scroll data-scroll-sticky data-scroll-target=".cMain">
+        <SoundWave />
         <div class="lHero-title">
-        <div class="lHero-titleInner" data-ref>
-            <h1 class="lHero-titleMain" data-ref>
-                <span class="lHero-titleMajor" data-ref aria-hidden="true">
-                    <span v-for="(text, i) in title" :key="i" class="lHero-titleWord">{{ text }}&nbsp;</span>
-                </span>
-                <span class="lHero-titleMajor -flicker" data-ref="titleMajorFlicker">
-                    <span v-for="(text, i) in title" :key="i" class="lHero-titleWord">{{ text }}&nbsp;</span>
-                </span>
-                <span class="lHero-titleSub" data-ref>{{ $t(`header.subtitle`) }}</span>
-            </h1>
-            <p class="lHero-logo" data-ref>
-                <span>
-                    <img class="lHero-logo-img -main" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo-main.png`)" />
-                    <img class="lHero-logo-img -border" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo-border.png`)" />
-                </span>
-            </p>
-        </div>
+            <div class="lHero-titleInner" data-ref>
+                <h1 class="lHero-titleMain" data-ref>
+                    <span class="lHero-titleMajor" data-ref aria-hidden="true">
+                        <span v-for="(text, i) in title" :key="i" class="lHero-titleWord">{{ text }}&nbsp;</span>
+                    </span>
+                    <span class="lHero-titleMajor -flicker" data-ref="titleMajorFlicker">
+                        <span v-for="(text, i) in title" :key="i" class="lHero-titleWord">{{ text }}&nbsp;</span>
+                    </span>
+                    <span class="lHero-titleSub" data-ref>{{ $t(`header.subtitle`) }}</span>
+                </h1>
+                <p class="lHero-logo" data-ref>
+                    <span>
+                        <img class="lHero-logo-img -main" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo-main.png`)" />
+                        <img class="lHero-logo-img -border" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo-border.png`)" />
+                    </span>
+                </p>
+            </div>
         </div>
         <BottomMarquee target="lHero" :texts="marquee" />
         <video class="lHero-video" :src="require(`@/assets/videos/background.mp4`)" muted loop playsinline autoplay data-ref></video>
@@ -44,6 +45,7 @@ import { computed } from "vue";
 import { getI18nList } from "@/models/util";
 
 import BottomMarquee from "@/views/comps/BottomMarquee.vue";
+import SoundWave from "@/views/comps/SoundWave.vue";
 
 const title = computed(() => getI18nList(`header.title`));
 const marquee = computed(() => getI18nList(`marquee.bottom`));
