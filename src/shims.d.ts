@@ -20,6 +20,8 @@ declare interface Window {
     marqueeRing: string;
     rayImageSrc: string;
     menuBgSrc: [desktop: string, mobile: string];
+    openingPending?: boolean;
+    openingStatus: boolean | "ray";
 }
 
 declare type Index = string | number;

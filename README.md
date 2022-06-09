@@ -45,7 +45,7 @@
         - 新聞文章對應的圖檔，位於 `src/images/articles/*.png`
             - 請配合語系的 `news.articles[i].image`
             - 文章數量無上限，但至少一筆
-        - 畫廊對應的圖檔，位於 `src/images/gallery/*.jpg`
+        - 畫廊對應的圖檔，位於 `src/images/gallery/photo-##.jpg`
             - 數量無上限，但至少一筆
             - 當數量非預設的 6 個時，須修改 (`src/views/sections/PageOutlineGallery.vue`) 代碼 (`photos.length`)
         - Outline 背景對應的圖檔，位於 `src/images/outline/*.png`
@@ -80,6 +80,12 @@
 8. 背景音樂
     - 因瀏覽器限制，音樂預設為關閉
     - 音樂檔位置：`src/assets/sounds/sounds.mp3`
+
+9. 開場的相片幻燈
+    - 對應的圖檔，位於：`src/assets/images/shows/photo-##.jpg`
+    - 當數量非預設的 7 個時，須修改 (`src/views/sections/PhotosShow.vue`) 代碼 (`photos.length`)
+    - 若需要修改圖片之間出現的間隔時間 (預設 0.2 秒)，須修改 (`src/views/sections/PhotosShow.vue`) 代碼 (`photos.stagger`)
+    - 若需要修改播放的總時間 (預設 3 秒)，須修改 (`src/App.vue`) 代碼 (`<PhotosShow>` 的屬性 `duration`)
 
 ## References
 * https://www.acsl.co.jp/drone-soten/

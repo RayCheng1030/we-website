@@ -2631,13 +2631,22 @@
                         this.lHero.disable(),
                         this.lHero.pause(),
                         this.lHero.hideProgress(1)) : this.startHero() : (this.once("startOpeningRay", (function() {
-                            t.startOpeningRay()
+                            window.openingPending = true;
+                            t.requestOpening()
                         }
                         )),
                         this.once("initCScroll", (function() {
                             P.Z.cScroll.stop()
                         }
                         )))
+                    }
+                }, {
+                    key: "requestOpening",
+                    value: function() {
+                        var t = this;
+                        if (window.openingStatus === "ray")
+                            t.startOpeningRay()
+                        else window.openingStatus ? t.startHero() : requestAnimationFrame(t.requestOpening.bind(t))
                     }
                 }, {
                     key: "startOpeningRay",
@@ -2671,6 +2680,7 @@
                     key: "startHero",
                     value: (e = (0,
                     i.Z)(regeneratorRuntime.mark((function t() {
+                        window.openingPending = false;
                         return regeneratorRuntime.wrap((function(t) {
                             for (; ; )
                                 switch (t.prev = t.next) {
