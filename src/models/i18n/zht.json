@@ -9,12 +9,12 @@
     "header": {
         "//title": "須至少一項；不同語系，數量應相同",
         "title": [
-            "政府監督",
-            "公平公正",
-            "世界娛樂"
+            "ＷＥ世界娛樂",
+            "政府監督下",
+            "公平有保障"
         ],
-        "subtitle": "Live 真人遊戲的世界裡 一個就夠了",
-        "sign": "菲律賓｜馬爾他 合法政府牌照"
+        "subtitle": "持有菲律賓、馬耳他博彩牌照！",
+        "sign": ""
     },
     "outline": {
         "//title": "須至少一項，每項代表一行字；不同語系，數量應相同；因自適應，避免字行過長",
@@ -39,14 +39,14 @@
                 "就在我們這座高達 1 萬 2 千平方米",
                 "擁有電視台專業規格的攝影棚",
                 "旗艦廳、維密廳、澳門廳、歐洲廳、亞洲廳、真人秀",
-                "共超過 120 張遊戲台，加上 WIP 私人招待會所",
+                "共超過 120 張遊戲台，加上 VVIP 私人招待會所",
                 "給貴賓提供高貴、尊榮的賭場體驗"
             ],
             [
                 "讓您久等了",
                 "我們期待已久 蓄勢待發",
                 "以嶄新遊戲體驗",
-                "帶您走進「就是好玩」的博彩殿堂",
+                "帶您走進 「就是好玩」 的博彩殿堂",
                 "歡迎來到 WE 世界娛樂"
             ]
         ]
@@ -71,7 +71,7 @@
             {
                 "date": "6.1",
                 "year": "2022",
-                "summary": "財神百家樂 即將上線 » 幸運 5 × 5 倍大放送，每局最高五張幸運牌，當您下注獲勝即可翻倍獲得彩金",
+                "summary": "財神百家樂 即將上線 » 幸運 5 × 5 × 5 倍大放送，每局最高五張幸運牌，當您下注獲勝即可翻倍獲得彩金",
                 "href": "https://www.acsl.co.jp/drone-soten/news/2007",
                 "image": "2021-11-01.png"
             }
@@ -122,18 +122,18 @@
         "link": {
             "top": [
                 {
-                    "title": "TG 官方聯繫",
-                    "href": "https://product.acsl.co.jp/flow/"
+                    "title": "商務聯繫",
+                    "href": ""
                 }
             ],
             "bottom": [
                 {
-                    "title": "試玩網站",
-                    "href": "https://product.acsl.co.jp/product/post-369/"
+                    "title": "Instagram",
+                    "href": ""
                 },
                 {
-                    "title": "官方粉絲團",
-                    "href": "https://www.acsl.co.jp/contact/"
+                    "title": "FB 官方粉絲團",
+                    "href": ""
                 }
             ]
         }
@@ -154,10 +154,16 @@
             "中國紅",
             "維蜜廳"
         ],
-        "ring": "Live 真人 ｜ 區塊鏈 ｜ 彩票 ｜ 捕魚 ｜ 世界杯 ｜ 老虎機 ｜ "
+        "ring": "真人 WE 區塊鏈 WE 彩票 WE 捕魚 WE 世界杯 WE 老虎機 WE"
     },
     "button": {
-        "fullMovie": "完整影片",
+        "fullMovie": {
+            "text": "▶",
+            "textLeft": "-10",
+            "border": "WORLD ENTERTAINMENT    WORLD ENTERTAINMENT",
+            "borderSize": "8.5"
+        },
+        "sound": "開關音樂",
         "more": "查看",
         "load": "載入更多",
         "close": "關閉",

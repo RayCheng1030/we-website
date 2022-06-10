@@ -963,9 +963,9 @@
             var N = n(7650)
               , D = n(6451);
             var W = {
-                durationTitleEnFlicker: 1,
-                staggerAmountTitleEnFlicker: .7,
-                delayTitleEnOverlap: .4,
+                durationTitleMajorFlicker: 1,
+                staggerAmountTitleMajorFlicker: .7,
+                delayTitleMajorOverlap: .4,
                 durationHeaderShow: 1,
                 delayHeaderShow: 1.5,
                 delayVideoShow: .5,
@@ -977,8 +977,8 @@
                 yHideTitle: -50,
                 delayShowOtherRate: .9
             };
-            W.delayTitleJp = W.delayTitleEnOverlap + .5,
-            W.delayLogo = W.delayTitleJp + .3,
+            W.delayTitleSub = W.delayTitleMajorOverlap + .5,
+            W.delayLogo = W.delayTitleSub + .3,
             W.delayMouseStalkerShow = W.delayLogo + .3;
             var F = function(t) {
                 (0,
@@ -1024,16 +1024,16 @@
                         var t = this;
                         this.isDisable = !1,
                         this.isShowMouseStalker = !1,
-                        this.motionTitleEnFlicker = new R.Z(this.refs.titleEnFlicker,{
-                            duration: W.durationTitleEnFlicker,
-                            amount: W.staggerAmountTitleEnFlicker
+                        this.motionTitleMajorFlicker = new R.Z(this.refs.titleMajorFlicker,{
+                            duration: W.durationTitleMajorFlicker,
+                            amount: W.staggerAmountTitleMajorFlicker
                         }),
-                        this.motionTitleEnOverlap = new M(this.refs.titleEn,{
+                        this.motionTitleMajorOverlap = new M(this.refs.titleMajor,{
                             isManual: !0,
-                            delay: W.delayTitleEnOverlap
+                            delay: W.delayTitleMajorOverlap
                         }),
-                        this.motionTitleJp = new R.Z(this.refs.titleJp,{
-                            delay: W.delayTitleJp
+                        this.motionTitleSub = new R.Z(this.refs.titleSub,{
+                            delay: W.delayTitleSub
                         }),
                         this.motionLogo = new M(this.refs.logo,{
                             isManual: !0,
@@ -1081,7 +1081,7 @@
                             duration: W.durationMarqueeShow,
                             ease: W.easeMarqueeShow,
                             delay: W.delayVideoShow
-                        }), this.showMouseStalker(W.delayMouseStalkerShow), this.motionTitleEnFlicker.show(), this.motionTitleEnOverlap.show(), this.motionTitleJp.show(), this.motionLogo.show(), 4 === this.refs.video.readyState ? this.refs.video.play() : new Promise((function(e) {
+                        }), this.showMouseStalker(W.delayMouseStalkerShow), this.motionTitleMajorFlicker.show(), this.motionTitleMajorOverlap.show(), this.motionTitleSub.show(), this.motionLogo.show(), 4 === this.refs.video.readyState ? this.refs.video.play() : new Promise((function(e) {
                             t.refs.video.addEventListener("loadeddata", (function() {
                                 t.refs.video.play(),
                                 e()
@@ -1104,7 +1104,7 @@
                         return this.el.classList.add("-ready", "-start"),
                         Promise.all([y.ZP.set(this.elsOthers, {
                             opacity: 1
-                        }), this.showMouseStalker(), this.motionTitleEnFlicker.show(), this.motionTitleEnOverlap.show(), this.motionTitleJp.show(), this.motionLogo.show(), this.isPc ? this.cMouseStalker.play() : null, y.ZP.set(P.Z.cHeader.el, {
+                        }), this.showMouseStalker(), this.motionTitleMajorFlicker.show(), this.motionTitleMajorOverlap.show(), this.motionTitleSub.show(), this.motionLogo.show(), this.isPc ? this.cMouseStalker.play() : null, y.ZP.set(P.Z.cHeader.el, {
                             opacity: 1
                         })])
                     }
@@ -1585,12 +1585,12 @@
                 r.Z)(n, [{
                     key: "onInit",
                     value: function() {
-                        if (!Array.isArray(this.refs.catchJp))
-                            this.refs.catchJp = [this.refs.catchJp];
-                        this.lOutlineCatchEn = new J({
+                        if (!Array.isArray(this.refs.catchSub))
+                            this.refs.catchSub = [this.refs.catchSub];
+                        this.lOutlineCatchMajor = new J({
                             context: this.el
                         }),
-                        this.refs.catchJp.forEach((function(t, e) {
+                        this.refs.catchSub.forEach((function(t, e) {
                             new _({
                                 el: t
                             })
@@ -1656,7 +1656,7 @@
                 }]),
                 n
             }(u.Z);
-            J.componentName = "lOutline-catchEn";
+            J.componentName = "lOutline-catchMajor";
             var _ = function(t) {
                 (0,
                 s.Z)(n, t);
@@ -1691,7 +1691,7 @@
                 }]),
                 n
             }(u.Z);
-            _.componentName = "lOutline-catchJp";
+            _.componentName = "lOutline-catchSub";
             var X = function(t) {
                 (0,
                 s.Z)(n, t);
@@ -2631,13 +2631,22 @@
                         this.lHero.disable(),
                         this.lHero.pause(),
                         this.lHero.hideProgress(1)) : this.startHero() : (this.once("startOpeningRay", (function() {
-                            t.startOpeningRay()
+                            window.openingPending = true;
+                            t.requestOpening()
                         }
                         )),
                         this.once("initCScroll", (function() {
                             P.Z.cScroll.stop()
                         }
                         )))
+                    }
+                }, {
+                    key: "requestOpening",
+                    value: function() {
+                        var t = this;
+                        if (window.openingStatus === "ray")
+                            t.startOpeningRay()
+                        else window.openingStatus ? t.startHero() : requestAnimationFrame(t.requestOpening.bind(t))
                     }
                 }, {
                     key: "startOpeningRay",
@@ -2671,6 +2680,7 @@
                     key: "startHero",
                     value: (e = (0,
                     i.Z)(regeneratorRuntime.mark((function t() {
+                        window.openingPending = false;
                         return regeneratorRuntime.wrap((function(t) {
                             for (; ; )
                                 switch (t.prev = t.next) {
