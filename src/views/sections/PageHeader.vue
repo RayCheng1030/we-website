@@ -12,7 +12,7 @@
                     </span>
                     <span class="lHero-titleSub" data-ref>{{ $t(`header.subtitle`) }}</span>
                 </h1>
-                <p class="lHero-logo" data-ref>
+                <p v-show="state.headerLogoVisible" class="lHero-logo" data-ref>
                     <span>
                         <img class="lHero-logo-img -main" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo-main.png`)" />
                         <img class="lHero-logo-img -border" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo-border.png`)" />
@@ -43,9 +43,12 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { getI18nList } from "@/models/util";
+import store from "@/models/store";
 
 import BottomMarquee from "@/views/comps/BottomMarquee.vue";
 import SoundWave from "@/views/comps/SoundWave.vue";
+
+const { state } = store;
 
 const title = computed(() => getI18nList(`header.title`));
 const marquee = computed(() => getI18nList(`marquee.bottom`));

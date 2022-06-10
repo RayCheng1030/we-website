@@ -87,5 +87,8 @@
     - 若需要修改圖片之間出現的間隔時間 (預設 0.2 秒)，須修改 (`src/views/sections/PhotosShow.vue`) 代碼 (`photos.stagger`)
     - 若需要修改播放的總時間 (預設 3 秒)，須修改 (`src/App.vue`) 代碼 (`<PhotosShow>` 的屬性 `duration`)
 
+10. Logo 的顯示與隱藏
+    - 可修改 (`src/models/store/index.ts`) 的屬性 (`state.headerLogoVisible`)，若為 `true` (預設) 為顯示，否則 `false` 為隱藏
+
 ## References
 * https://www.acsl.co.jp/drone-soten/
