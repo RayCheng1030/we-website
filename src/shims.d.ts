@@ -19,6 +19,7 @@ declare interface Window {
     routes: string[];
     marqueeRing: string;
     rayImageSrc: string;
+    rayProgress?: number;
     menuBgSrc: [desktop: string, mobile: string];
     openingPending?: boolean;
     openingStatus: boolean | "ray";
