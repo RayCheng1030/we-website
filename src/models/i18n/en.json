@@ -148,7 +148,13 @@
         "ring": "Live 真人 ｜ 區塊鏈 ｜ 彩票 ｜ 捕魚 ｜ 世界杯 ｜ 老虎機 ｜ "
     },
     "button": {
-        "fullMovie": "FULL MOVIE",
+        "fullMovie": {
+            "text": "▶",
+            "textLeft": "-10",
+            "border": "WORLD ENTERTAINMENT    WORLD ENTERTAINMENT",
+            "borderSize": "8.5"
+        },
+        "sound": "Toggle Sound",
         "more": "MORE",
         "load": "LOAD MORE",
         "close": "CLOSE",

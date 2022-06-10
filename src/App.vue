@@ -11,7 +11,8 @@
     <div data-permanent>
         <MenuNavigation />
         <MenuPopup />
-
+        <PhotosShow v-if="!opening.status" :show="opening.pending" :duration="3" @complete="onPhotosCompleted" />
+        <SoundToggle />
         <canvas class="cRay" data-el></canvas>
         <canvas class="cRayBackground" data-el></canvas>
         <canvas class="cCylinder" data-el></canvas>
@@ -19,13 +20,35 @@
 </template>
 
 <script setup lang="ts">
-import { watch } from "vue";
+import { reactive, watch } from "vue";
 import { useI18n } from "vue-i18n";
 
 import MenuNavigation from "@/views/sections/MenuNavigation.vue";
 import MenuPopup from "@/views/sections/MenuPopup.vue";
+import PhotosShow from "@/views/sections/PhotosShow.vue";
+import SoundToggle from "@/views/sections/SoundToggle.vue";
 
 const { t, locale } = useI18n();
+const opening = reactive({
+    pending: false as NonNullable<typeof window["openingPending"]>,
+    status: false as NonNullable<typeof window["openingStatus"]>,
+});
+
+window.rayImageSrc = require(`@/assets/images/ray.jpg`);
+window.menuBgSrc = [require(`@/assets/images/menu/bg.jpg`), require(`@/assets/images/menu/bg-mobile.jpg`)];
+window.openingStatus = false;
+
+const onPhotosCompleted = () => {
+    window.openingStatus = true;
+}
+
+const updateOpening = () => {
+    opening.pending = !!window.openingPending;
+    opening.status = window.openingStatus;
+
+    window.requestAnimationFrame(updateOpening);
+}
+updateOpening();
 
 const updateLocale = (locale: string) => {
     const head = document.getElementsByTagName("head")[0];
@@ -48,9 +71,6 @@ const updateLocale = (locale: string) => {
 };
 updateLocale(locale.value);
 watch(locale, updateLocale);
-
-window.rayImageSrc = require(`@/assets/images/ray.jpg`);
-window.menuBgSrc = [require(`@/assets/images/menu/bg.jpg`), require(`@/assets/images/menu/bg-mobile.jpg`)];
 </script>
 
 <style lang="scss">
