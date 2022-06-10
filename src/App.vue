@@ -16,6 +16,7 @@
         <canvas class="cRay" data-el></canvas>
         <canvas class="cRayBackground" data-el></canvas>
         <canvas class="cCylinder" data-el></canvas>
+        <div v-show="ray.progress >= 0.01" class="cRayForeground" :style="`background-image: url(${ require(`@/assets/images/king.png`) }); opacity: ${ ray.progress }`" />
     </div>
 </template>
 
@@ -33,6 +34,9 @@ const opening = reactive({
     pending: false as NonNullable<typeof window["openingPending"]>,
     status: false as NonNullable<typeof window["openingStatus"]>,
 });
+const ray = reactive({
+    progress: 0 as NonNullable<typeof window["rayProgress"]>,
+});
 
 window.rayImageSrc = require(`@/assets/images/ray.jpg`);
 window.menuBgSrc = [require(`@/assets/images/menu/bg.jpg`), require(`@/assets/images/menu/bg-mobile.jpg`)];
@@ -42,13 +46,14 @@ const onPhotosCompleted = () => {
     window.openingStatus = true;
 }
 
-const updateOpening = () => {
+const updateStatus = () => {
     opening.pending = !!window.openingPending;
     opening.status = window.openingStatus;
+    ray.progress = window.rayProgress || 0;
 
-    window.requestAnimationFrame(updateOpening);
+    window.requestAnimationFrame(updateStatus);
 }
-updateOpening();
+updateStatus();
 
 const updateLocale = (locale: string) => {
     const head = document.getElementsByTagName("head")[0];
@@ -76,5 +81,18 @@ watch(locale, updateLocale);
 <style lang="scss">
 .full-width {
     @include full-width;
+}
+
+.cRayForeground {
+    position: fixed;
+    z-index: 750;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
 }
 </style>
