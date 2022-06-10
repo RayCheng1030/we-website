@@ -2703,6 +2703,7 @@
                         return this.programLine.uniforms.uProgress
                     },
                     set: function(t) {
+                        window.rayProgress = t;
                         this.programLine.uniforms.uProgress = t
                     }
                 }, {

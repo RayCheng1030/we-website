@@ -4,6 +4,7 @@ export default createStore({
     modules: {
     },
     state: {
+        headerLogoVisible: true,
         isSoundPlaying: false,
     },
     getters: {
