@@ -14,8 +14,7 @@
                 </h1>
                 <p v-show="state.headerLogoVisible" class="lHero-logo" data-ref>
                     <span>
-                        <img class="lHero-logo-img -main" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo-main.png`)" />
-                        <img class="lHero-logo-img -border" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo-border.png`)" />
+                        <img class="lHero-logo-img" width="150" height="100" aria-label="WE Logo" :src="require(`@/assets/images/logo.png`)" />
                     </span>
                 </p>
             </div>
@@ -55,20 +54,6 @@ const marquee = computed(() => getI18nList(`marquee.bottom`));
 </script>
 
 <style lang="scss">
-.lHero-logo .mOverlap .mOverlap-line {
-    width: 6.5rem;
-    height: 6.5rem;
-
-    .lHero-logo-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        &.-border {
-            animation: spin 5s ease-out infinite;
-        }
-    }
-}
 .lHeroMouseStalker {
     width: 100px;
     height: 100px;
@@ -92,10 +77,6 @@ const marquee = computed(() => getI18nList(`marquee.bottom`));
 @include mobile {
     .lHero-titleWord {
         @include full-width;
-    }
-    .lHero-logo .mOverlap .mOverlap-line {
-        width: 3.5rem;
-        height: 3.5rem;
     }
     .lHeroMouseStalker {
         transform: translate(0%, 0%);
