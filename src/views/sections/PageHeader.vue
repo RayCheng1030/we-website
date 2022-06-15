@@ -107,10 +107,10 @@ const marquee = computed(() => getI18nList(`marquee.bottom`));
 }
 
 @keyframes spin {
-    0%, 90% {
+    0%, 80% {
         transform: scale(1) rotate(0deg);
     }
-    92.5% {
+    82.5% {
         transform: scale(1.2);
     }
     100% {
