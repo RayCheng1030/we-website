@@ -16,7 +16,7 @@ const wave = ref(null as HTMLDivElement | null);
 const updateOpacity = () => {
     const titleInner = document.querySelector(".lHero-titleInner") as HTMLDivElement | null;
 
-    wave.value && (wave.value.style.opacity = titleInner?.style.opacity || "0");
+    wave.value && (wave.value.style.opacity = titleInner?.style.opacity || "0.75");
     requestAnimationFrame(updateOpacity);
 };
 requestAnimationFrame(updateOpacity);
