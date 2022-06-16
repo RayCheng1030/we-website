@@ -7,8 +7,8 @@
 </template>
 
 <script setup lang="ts">
-import store from "@/models/store";
 import { ref } from "vue";
+import store from "@/models/store";
 
 const { state } = store;
 const wave = ref(null as HTMLDivElement | null);
