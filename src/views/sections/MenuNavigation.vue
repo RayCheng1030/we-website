@@ -1,5 +1,5 @@
 <template>
-    <header :class="`cHeader ${ route.name !== `home` && `opacity-100` }`" data-el="cHeader">
+    <header :class="`cHeader ${ route.name !== `home` && `opacity-100` }`" ref="header" data-el="cHeader">
         <div class="cHeader-main">
             <p class="cHeader-text">{{ $t("header.sign") }}</p>
             <LogoSign target="cHeader" />
@@ -24,11 +24,17 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import { useRoute } from "vue-router";
 
 import LogoSign from "@/views/comps/LogoSign.vue";
 
+const header = ref(null as HTMLDivElement | null);
 const route = useRoute();
+
+window.addEventListener("scroll", () => {
+    window.scrollY > 200 ? header.value?.classList.add("-background") : header.value?.classList.remove("-background");
+});
 </script>
 
 <style lang="scss">
@@ -41,12 +47,20 @@ const route = useRoute();
         width: calc(6rem * 1.5);
         height: calc(2.3rem * 1.5);
     }
+    .cHeader.-menu {
+        background-image: url("~@/assets/images/menu/nav-bg.png");
+        background-size: 100% 100%;
+    }
 }
 
 @include mobile {
     .cHeader-logo-image {
         width: calc(6rem * 1.35);
         height: calc(2.3rem * 1.35);
+    }
+    .cHeader.-background {
+        background-image: url("~@/assets/images/menu/nav-bg.png");
+        background-size: 100% 100%;
     }
 }
 </style>
