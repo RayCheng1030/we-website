@@ -751,8 +751,8 @@
     }
 
     .lHero-logo-img {
-        width: calc(418rem * 0.08);
-        height: calc(68rem * 0.08);
+        width: 418px;
+        height: 68px;
     }
 
     .lHero-marquee {
