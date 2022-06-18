@@ -17,6 +17,7 @@
         <canvas class="cRayBackground" data-el></canvas>
         <canvas class="cCylinder" data-el></canvas>
         <div v-show="ray.progress >= 0.01" class="cRayForeground" :style="`background-image: url(${ require(`@/assets/images/king.png`) }); opacity: ${ ray.progress }`" />
+        <div v-show="screen.scrolling" class="cScrollingMask"></div>
     </div>
 </template>
 
@@ -37,10 +38,14 @@ const opening = reactive({
 const ray = reactive({
     progress: 0 as NonNullable<typeof window["rayProgress"]>,
 });
+const screen = reactive({
+    scrolling: false as NonNullable<typeof window["screenScrolling"]>,
+});
 
 window.rayImageSrc = require(`@/assets/images/ray.jpg`);
 window.menuBgSrc = [require(`@/assets/images/menu/bg.jpg`), require(`@/assets/images/menu/bg-mobile.jpg`)];
-window.openingStatus = false;
+
+watch(() => screen.scrolling, value => console.log(value))
 
 const onPhotosCompleted = () => {
     window.openingStatus = true;
@@ -50,6 +55,7 @@ const updateStatus = () => {
     opening.pending = !!window.openingPending;
     opening.status = window.openingStatus;
     ray.progress = window.rayProgress || 0;
+    screen.scrolling = !!window.screenScrolling;
 
     window.requestAnimationFrame(updateStatus);
 }
@@ -94,5 +100,15 @@ watch(locale, updateLocale);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
+}
+.cScrollingMask {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: #050711;
 }
 </style>

@@ -23,6 +23,7 @@ declare interface Window {
     menuBgSrc: [desktop: string, mobile: string];
     openingPending?: boolean;
     openingStatus: boolean | "ray";
+    screenScrolling?: boolean;
 }
 
 declare type Index = string | number;
