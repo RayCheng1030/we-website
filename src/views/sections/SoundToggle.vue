@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import store from "@/models/store";
 
 const { state, commit } = store;
@@ -17,6 +17,10 @@ const onToggleSound = () => {
 
     state.isSoundPlaying ? sound.value?.play() : sound.value?.pause();
 };
+
+watch(() => state.isVideoPlaying, value => {
+    sound.value && (sound.value.muted = value);
+});
 </script>
 
 <style lang="scss">
