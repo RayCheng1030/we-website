@@ -47,10 +47,6 @@ window.addEventListener("scroll", () => {
         width: calc(6rem * 1.5);
         height: calc(2.3rem * 1.5);
     }
-    .cHeader.-menu {
-        background-image: url("~@/assets/images/menu/nav-bg.png");
-        background-size: 100% 100%;
-    }
 }
 
 @include mobile {
