@@ -9,8 +9,8 @@
             <span v-for="(text, i) in title" :key="i">{{ text }}&nbsp;<br></span>
         </p>
         <picture>
-            <source media="(max-width: 767px)" :srcset="require(`@/assets/images/outline/main.png`)">
-            <img class="lOutline-image" alt="" loading="lazy" data-ref data-scroll data-scroll-speed="-3" :src="require(`@/assets/images/outline/main.png`)" :width="main.width">
+            <source media="(max-width: 767px)" :srcset="require(`@/assets/images/outline/main-mobile.jpg`)">
+            <img class="lOutline-image" alt="" loading="lazy" data-ref data-scroll data-scroll-speed="-3" :src="require(`@/assets/images/outline/main.jpg`)" :width="main.width">
         </picture>
         <p class="lOutline-catchSub" data-ref data-scroll data-scroll-call="lOutline-catchSub">
             <span class="lOutline-catchSub-line -top"></span>
