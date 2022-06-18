@@ -33,11 +33,16 @@
         <!-- Libraries -->
         <link rel="stylesheet" href="<%= BASE_URL %>styles/main.css?v=4">
         <link rel="stylesheet" href="<%= BASE_URL %>styles/pace-theme-default.min.css?v=4" data-reload>
+
+        <script src="//cdn.jsdelivr.net/npm/eruda"></script>
     </head>
     <body id="pIndex">
         <noscript>
             <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
         </noscript>
+        <script>
+            eruda.init();
+        </script>
         <div id="app"></div>
         <!-- built files will be auto injected -->
     </body>
