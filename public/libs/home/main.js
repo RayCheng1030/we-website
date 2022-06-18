@@ -1889,6 +1889,7 @@
                                     duration: 1e3 * a,
                                     easing: o ? null : v || Q.ease,
                                     callback: function() {
+                                        window.screenScrolling = false,
                                         s.Z.isScrollAnimating = !1,
                                         y()
                                     },
@@ -1932,6 +1933,7 @@
                                     duration: a,
                                     ease: p ? "none" : Q.easeGsap,
                                     onComplete: function() {
+                                        window.screenScrolling = false,
                                         s.Z.isScrollAnimating = !1,
                                         y()
                                     }
@@ -3535,8 +3537,9 @@
                 S.Ds)((function() {
                     var hash = !window.routes.some(route => location.hash.startsWith("#" + route)) && location.hash.match(/^#\/\w+/) ? location.hash.replace("#/", "#") : "";
                     i.unobserve(t),
+                    window.screenScrolling = !!hash,
                     hash ? setTimeout((function() {
-                        s.Z.cScroll.scrollTo(hash)
+                        s.Z.cScroll.scrollTo(hash, { duration: 0.1 })
                     }
                     ), 300) : s.Z.cScroll.scrollToFast(),
                     o.Z.emit("resizeFirst")
