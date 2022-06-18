@@ -1,6 +1,6 @@
 <template>
     <div class="cModal lVideo" data-modal="lVideo" data-el>
-        <div class="cModal-content lVideo-content" data-modal-content data-ref>
+        <div class="cModal-content lVideo-content" ref="video" data-modal-content data-ref>
             <video class="lVideo-video" :data-src="require(`@/assets/videos/full.mp4`)" controls preload="none" data-ref></video>
         </div>
         <div class="cModal-close lVideo-close" data-modal-close aria-label="CLOSE">
@@ -26,7 +26,18 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+import store from "@/models/store";
 
+const { state } = store;
+const video = ref(null as HTMLDivElement | null);
+
+const checkVisibility = () => {
+    state.isVideoPlaying = (video.value?.style.opacity || 0) > 0;
+
+    requestAnimationFrame(checkVisibility);
+};
+requestAnimationFrame(checkVisibility);
 </script>
 
 <style lang="scss">

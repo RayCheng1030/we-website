@@ -1042,7 +1042,8 @@ body.-open {
     }
 
     .cHeader-main {
-        padding-top: 1.75rem
+        padding-top: 0.5rem;
+        padding-bottom: 1.5rem
     }
 
     .cHeader-text {
@@ -1056,7 +1057,7 @@ body.-open {
 
     .cHeader-nav {
         font-size: .9375rem;
-        padding-top: 4.375rem;
+        padding-top: 3.5rem;
         position: relative
     }
 
@@ -1099,7 +1100,7 @@ body.-open {
     }
 
     .cMenu-logo {
-        top: 4.25rem;
+        top: 2.25rem;
         left: 6.25rem
     }
 
@@ -1128,7 +1129,7 @@ body.-open {
 
     .cModal-close {
         font-size: .9375rem;
-        top: 4.375rem;
+        top: 3.5rem;
         right: 6.25rem;
         margin: -.625rem;
         padding: .625rem
@@ -1214,7 +1215,8 @@ body.-open {
     }
 
     .cHeader-main {
-        padding-top: 1.875rem
+        padding-top: 0.875rem;
+        padding-bottom: 0.475rem
     }
 
     .cHeader-text {
@@ -1264,7 +1266,7 @@ body.-open {
     }
 
     .cMenu-logo {
-        top: 1.875rem;
+        top: 0.875rem;
         left: 2.15625rem
     }
 

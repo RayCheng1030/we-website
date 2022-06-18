@@ -6,6 +6,7 @@ export default createStore({
     state: {
         headerLogoVisible: true,
         isSoundPlaying: false,
+        isVideoPlaying: false,
     },
     getters: {
     },
