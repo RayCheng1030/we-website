@@ -2632,6 +2632,7 @@
                         this.lHero.pause(),
                         this.lHero.hideProgress(1)) : this.startHero() : (this.once("startOpeningRay", (function() {
                             window.openingPending = true;
+                            window.setTimeout(() => window.openingStatus = true, window.openingTimeout * 1000);
                             t.requestOpening()
                         }
                         )),
