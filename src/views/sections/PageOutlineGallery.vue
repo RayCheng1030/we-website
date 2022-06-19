@@ -21,8 +21,8 @@ import { pad } from "@/models/util";
 
 const photos = reactive({
     length: 6,
-    width: 1000,
-    height: 660,
+    width: 300,
+    height: 300,
 });
 </script>
 
