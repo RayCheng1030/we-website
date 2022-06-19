@@ -23,6 +23,7 @@ declare interface Window {
     menuBgSrc: [desktop: string, mobile: string];
     openingPending?: boolean;
     openingStatus: boolean | "ray";
+    openingTimeout: number;
     screenScrolling?: boolean;
 }
 
