@@ -780,13 +780,16 @@
                     key: "finish",
                     value: function() {
                         var t = this;
-                        this.isLoadDone && this.isStartDone && (y.ZP.delayedCall(.5, (function() {
-                            t.motionCatches[t.motionCatchIndex - 1].hide(),
-                            t.el.addEventListener("transitionend", (function() {
-                                t.destroy()
+                        /*this.isLoadDone &&*/ this.isStartDone && (y.ZP.delayedCall(.5, (function() {
+                            try {
+                                t.motionCatches[t.motionCatchIndex - 1].hide(),
+                                t.el.addEventListener("transitionend", (function() {
+                                    t.destroy()
+                                }
+                                )),
+                                t.el.classList.add("-hide")
                             }
-                            )),
-                            t.el.classList.add("-hide")
+                            catch (e) {}
                         }
                         )),
                         this.emit("startOpeningRay"))
