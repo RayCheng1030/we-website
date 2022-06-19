@@ -45,8 +45,6 @@ const screen = reactive({
 window.rayImageSrc = require(`@/assets/images/ray.jpg`);
 window.menuBgSrc = [require(`@/assets/images/menu/bg.jpg`), require(`@/assets/images/menu/bg-mobile.jpg`)];
 
-watch(() => screen.scrolling, value => console.log(value))
-
 const onPhotosCompleted = () => {
     window.openingStatus = true;
 }

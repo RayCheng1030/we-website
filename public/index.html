@@ -38,6 +38,11 @@
         <noscript>
             <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
         </noscript>
+        <script>
+            window.onerror = function (message, source, lineno, colno, error) {
+                lineno === 0 && colno === 0 && error === null && window.location.reload();
+            }
+        </script>
         <div id="app"></div>
         <!-- built files will be auto injected -->
     </body>

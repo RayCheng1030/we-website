@@ -32,7 +32,7 @@ router.beforeEach(to => {
     }
     else i18n.global.locale = localStorage.getItem("lang") || "zht";
 });
-router.afterEach(to => {
+router.afterEach(() => {
     if (sessionStorage.getItem("site-loaded"))
         sessionStorage.clear();
     else {
