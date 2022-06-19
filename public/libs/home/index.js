@@ -786,7 +786,8 @@
                             t.el.addEventListener("transitionend", (function() {
                                 t.destroy()
                             }
-                            catch (e) {}
+                            )),
+                            t.el.classList.add("-hide")
                         }
                         )),
                         this.emit("startOpeningRay"))
