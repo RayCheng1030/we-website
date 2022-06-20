@@ -37,7 +37,7 @@ const checkVisibility = () => {
 
     requestAnimationFrame(checkVisibility);
 };
-requestAnimationFrame(checkVisibility);
+checkVisibility();
 </script>
 
 <style lang="scss">

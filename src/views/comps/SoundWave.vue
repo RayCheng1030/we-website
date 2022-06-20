@@ -19,7 +19,7 @@ const updateOpacity = () => {
     wave.value && (wave.value.style.opacity = titleInner?.style.opacity || "0.75");
     requestAnimationFrame(updateOpacity);
 };
-requestAnimationFrame(updateOpacity);
+updateOpacity();
 </script>
 
 <style lang="scss">
