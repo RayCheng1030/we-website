@@ -25,6 +25,8 @@ declare interface Window {
     openingStatus: boolean | "ray";
     openingTimeout: number;
     screenScrolling?: boolean;
+    heroStarting?: boolean;
+    setHeroScrollable: () => void;
 }
 
 declare type Index = string | number;

@@ -2690,7 +2690,8 @@
                                 switch (t.prev = t.next) {
                                 case 0:
                                     return t.next = 2,
-                                    this.lHero.start();
+                                    this.lHero.start(),
+                                    window.heroStarting = true;
                                 case 2:
                                     P.Z.cScroll.start(),
                                     this.isOpeningEnd = !0;
