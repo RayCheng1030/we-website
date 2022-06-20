@@ -787,10 +787,12 @@
                                 t.destroy()
                             }
                             )),
-                            t.el.classList.add("-hide")
+                            t.el.classList.add("-hide"),
+                            y.ZP.delayedCall(.5, (function() {
+                                t.emit("startOpeningRay")
+                            }))
                         }
-                        )),
-                        this.emit("startOpeningRay"))
+                        )))
                     }
                 }, {
                     key: "destroy",
