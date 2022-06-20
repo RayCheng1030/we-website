@@ -1,5 +1,5 @@
 <template>
-    <a class="lHero" :style="`${ visible || 'visibility: hidden' }`" data-el data-scroll data-scroll-sticky data-scroll-target=".cMain">
+    <a class="lHero -start" :style="`${ visible || 'visibility: hidden' }`" data-el data-scroll data-scroll-sticky data-scroll-target=".cMain">
         <SoundWave />
         <div class="lHero-title">
             <div class="lHero-titleInner" data-ref>
