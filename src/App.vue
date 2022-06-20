@@ -56,7 +56,7 @@ const updateStatus = () => {
     ray.progress = window.rayProgress || 0;
     screen.scrolling = !!window.screenScrolling;
 
-    window.requestAnimationFrame(updateStatus);
+    requestAnimationFrame(updateStatus);
 }
 updateStatus();
 

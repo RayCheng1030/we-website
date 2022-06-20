@@ -37,7 +37,7 @@ const getMarqueeWidth = () => {
     }
     requestAnimationFrame(getMarqueeWidth);
 };
-requestAnimationFrame(getMarqueeWidth);
+getMarqueeWidth();
 </script>
 
 <style lang="scss">
