@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, reactive, ref } from "vue";
+import { computed, ref } from "vue";
 import { getI18nList } from "@/models/util";
 import store from "@/models/store";
 
@@ -54,8 +54,21 @@ const visible = ref(true);
 const title = computed(() => getI18nList(`header.title`));
 const marquee = computed(() => getI18nList(`marquee.bottom`));
 
+const onScroll = (event: Event) => event.preventDefault();
+const lockScreen = () => {
+    window.addEventListener("touchmove", onScroll, { passive: false });
+    window.addEventListener("wheel", onScroll, { passive: false });
+}
+const unlockScreen = () => {
+    window.removeEventListener("touchmove", onScroll);
+    window.removeEventListener("wheel", onScroll);
+}
+lockScreen();
+
 const updateStatus = () => {
     if (window.heroStarting) {
+        unlockScreen();
+
         if (video.value?.paused)
             window.setHeroScrollable();
     }
@@ -64,7 +77,10 @@ const updateStatus = () => {
 updateStatus();
 
 window.addEventListener("scroll", () => {
-    visible.value = window.scrollY < 200;
+    const isTop = window.scrollY < 200;
+
+    visible.value = isTop;
+    isTop || unlockScreen();
 });
 </script>
 
