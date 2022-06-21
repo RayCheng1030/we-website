@@ -101,53 +101,13 @@ button {
     outline: auto;
 }
 
-@keyframes marquee-pc {
+@keyframes marquee {
     0% {
         transform: translateX(0)
     }
 
     to {
-        transform: translateX(-94%)
-    };
-}
-
-@keyframes marquee-sp-wide {
-    0% {
-        transform: translateX(0)
-    }
-
-    to {
-        transform: translateX(-88%)
-    };
-}
-
-@keyframes marquee-sp-iphone-twenteen {
-    0% {
-        transform: translateX(0)
-    }
-
-    to {
-        transform: translateX(-87.5%)
-    };
-}
-
-@keyframes marquee-sp-iphone-eleven {
-    0% {
-        transform: translateX(0)
-    }
-
-    to {
-        transform: translateX(-87.3%)
-    };
-}
-
-@keyframes marquee-sp-small {
-    0% {
-        transform: translateX(0)
-    }
-
-    to {
-        transform: translateX(-85%)
+        transform: translateX(-100%)
     };
 }
 
@@ -1091,7 +1051,7 @@ body.-open {
     }
 
     .cMarquee-line {
-        animation: marquee-pc 24s linear infinite
+        /* animation: marquee 24s linear infinite */
     }
 
     .cMenu-background {
@@ -1257,7 +1217,7 @@ body.-open {
     }
 
     .cMarquee-line {
-        animation: marquee-sp-wide 12s linear infinite
+        /* animation: marquee 24s linear infinite */
     }
 
     .cMenu-background {
@@ -1375,23 +1335,5 @@ body.-open {
 @media screen and (min-width: 768px) and (max-width:800px) {
     .cMarquee {
         font-size:10px
-    };
-}
-
-@media screen and (max-width: 414px) and (min-width:400px) {
-    .cMarquee-line {
-        animation:marquee-sp-iphone-twenteen 12s linear infinite
-    };
-}
-
-@media screen and (max-width: 390px) {
-    .cMarquee-line {
-        animation:marquee-sp-iphone-eleven 12s linear infinite
-    };
-}
-
-@media screen and (max-width: 375px) {
-    .cMarquee-line {
-        animation:marquee-sp-small 12s linear infinite
     };
 }

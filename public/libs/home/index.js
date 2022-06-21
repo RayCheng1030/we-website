@@ -780,16 +780,19 @@
                     key: "finish",
                     value: function() {
                         var t = this;
-                        this.isLoadDone && this.isStartDone && (y.ZP.delayedCall(.5, (function() {
+                        /*this.isLoadDone &&*/ this.isStartDone && (y.ZP.delayedCall(.5, (function() {
                             t.motionCatches[t.motionCatchIndex - 1].hide(),
+                            t.el || (t.el = document.querySelector(".cLoading")),
                             t.el.addEventListener("transitionend", (function() {
                                 t.destroy()
                             }
                             )),
-                            t.el.classList.add("-hide")
+                            t.el.classList.add("-hide"),
+                            y.ZP.delayedCall(.5, (function() {
+                                t.emit("startOpeningRay")
+                            }))
                         }
-                        )),
-                        this.emit("startOpeningRay"))
+                        )))
                     }
                 }, {
                     key: "destroy",
@@ -2687,7 +2690,8 @@
                                 switch (t.prev = t.next) {
                                 case 0:
                                     return t.next = 2,
-                                    this.lHero.start();
+                                    this.lHero.start(),
+                                    window.heroStarting = true;
                                 case 2:
                                     P.Z.cScroll.start(),
                                     this.isOpeningEnd = !0;

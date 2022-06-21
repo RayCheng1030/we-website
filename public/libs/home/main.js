@@ -427,6 +427,7 @@
                 window.removeEventListener("touchmove", y, w),
                 window.removeEventListener("wheel", y, w)
             }
+            window.setHeroScrollable = k;
             var x = {
                 modalOpened: null,
                 targetFixedFull: null,

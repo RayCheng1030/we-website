@@ -20,7 +20,7 @@
             </div>
         </div>
         <BottomMarquee target="lHero" :texts="marquee" />
-        <video class="lHero-video" :src="require(`@/assets/videos/background.mp4`)" :poster="require(`@/assets/images/video-cover.jpg`)" muted loop playsinline autoplay data-ref></video>
+        <video class="lHero-video" ref="video" :src="require(`@/assets/videos/background.mp4`)" :poster="require(`@/assets/images/video-cover.jpg`)" muted loop playsinline autoplay data-ref></video>
         <div class="lHeroMouseStalker" data-el="cMouseStalker">
             <div class="lHeroMouseStalker-text" data-ref="cMouseStalker-text" :style="`left: calc(50% + ${ $t(`button.fullMovie.textLeft`) }px)`">{{ $t("button.fullMovie.text") }}</div>
             <div class="lHeroMouseStalker-shape -normal" data-ref="cMouseStalker-shapeNormal" style="display: none" />
@@ -48,13 +48,39 @@ import BottomMarquee from "@/views/comps/BottomMarquee.vue";
 import SoundWave from "@/views/comps/SoundWave.vue";
 
 const { state } = store;
+const video = ref(null as HTMLVideoElement | null);
 const visible = ref(true);
 
 const title = computed(() => getI18nList(`header.title`));
 const marquee = computed(() => getI18nList(`marquee.bottom`));
 
+const onScroll = (event: Event) => event.preventDefault();
+const lockScreen = () => {
+    window.addEventListener("touchmove", onScroll, { passive: false });
+    window.addEventListener("wheel", onScroll, { passive: false });
+}
+const unlockScreen = () => {
+    window.removeEventListener("touchmove", onScroll);
+    window.removeEventListener("wheel", onScroll);
+}
+lockScreen();
+
+const updateStatus = () => {
+    if (window.heroStarting) {
+        unlockScreen();
+
+        if (video.value?.paused)
+            window.setHeroScrollable();
+    }
+    else requestAnimationFrame(updateStatus);
+}
+updateStatus();
+
 window.addEventListener("scroll", () => {
-    visible.value = window.scrollY < 200;
+    const isTop = window.scrollY < 200;
+
+    visible.value = isTop;
+    isTop || unlockScreen();
 });
 </script>
 
