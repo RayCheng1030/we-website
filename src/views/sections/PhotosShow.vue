@@ -15,7 +15,7 @@ const emit = defineEmits<{
 
 const photos = reactive({
     length: 10,
-    width: 0.3,
+    width: 0.5,
     stagger: 0.2,
 });
 const getPhotoStyle = (i: number) => {
