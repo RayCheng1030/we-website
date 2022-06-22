@@ -1730,13 +1730,13 @@
                             yPercent: 120,
                             duration: 1.9,
                             ease: "expo.out",
-                            stagger: .24
+                            stagger: .12
                         }),
                         y.ZP.from(this.elsLine, {
                             opacity: 0,
                             duration: .8,
                             ease: "power3.in",
-                            stagger: .24
+                            stagger: .12
                         })
                     }
                 }]),
