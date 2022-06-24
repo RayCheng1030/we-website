@@ -10,7 +10,7 @@
         </p>
         <div class="lOrder-purchase">
             <p class="lOrder-purchase-text">
-                <span v-for="(text, i) in subtitle" :key="i" class="full-width">{{ text }}</span>
+                <span v-for="(text, i) in subtitle" :key="i" class="full-width" v-html="text"></span>
             </p>
             <div class="lOrder-purchase-action">
                 <ContactLink v-for="(link, i) in linkTop" :key="i" :title="link.title" :href="link.href" />
