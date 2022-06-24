@@ -35,7 +35,7 @@ import ContactLink from "@/views/comps/ContactLink.vue";
 const { t } = useI18n();
 
 const title = computed(() => getI18nList(`order.title`));
-const subtitle = computed(() => getI18nList(`order.subtitle`));
+const subtitle = computed(() => getI18nList(`order.subtitle`).map(v => v + "&nbsp;"));
 const linkTop = computed(() => getI18nList(`order.link.top`, `title`).map((v, i) => {
     return { title: t(`order.link.top[${ i }].title`), href: t(`order.link.top[${ i }].href`) };
 }));
