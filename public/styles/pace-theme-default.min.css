@@ -1095,8 +1095,16 @@ body.-open {
         padding: .625rem
     }
 
-    .cNews-link:hover .cNews-article-image, .cNews-link:hover .cNews-article-text, .cNews-link:hover .cNews-day-month, .cNews-link:hover .cNews-day-year {
+    .cNews-link:hover .cNews-article-text, .cNews-link:hover .cNews-day-month, .cNews-link:hover .cNews-day-year {
         opacity: .4
+    }
+
+    .cNews-link:hover .cNews-article-image {
+        opacity: 1 !important;
+    }
+
+    .cNews-article-image {
+        opacity: .85 !important;
     }
 
     .cNews-day {
