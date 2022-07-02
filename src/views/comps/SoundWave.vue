@@ -56,12 +56,12 @@ updateOpacity();
 }
 
 @keyframes sound-wave {
-    0% {
+    5% {
         width: 0;
         height: 0;
         opacity: 1;
     }
-    100% {
+    95% {
         width: 400px;
         height: 800px;
         opacity: 0;
