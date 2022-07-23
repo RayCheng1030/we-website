@@ -1,161 +1,200 @@
 {
+    "//navigation": "目前未實作浮動的選單數量，若有需求可再調整",
     "navigation": {
         "menu": "MENU",
-        "outline": "OUTLINE",
-        "news": "NEWS",
-        "order": "ORDER"
+        "outline": "SCENE",
+        "news": "PRODUCTS",
+        "order": "CONTACT"
     },
     "header": {
+        "//title": "須至少一項；不同語系，數量應相同",
         "title": [
-            "MOVING",
-            "SOCIETY",
-            "FORWARD"
+            "WE",
+            "ABSOLUTE",
+            "ENJOYMENT"
         ],
-        "subtitle": "Secure domestic drone that supports the future",
-        "sign": "Autonomous Control Systems Laboratory"
+        "subtitle": "PAGCOR, MGA, GLI INTERNATIONAL FAIRNESS MECHANISM CERTIFICATE",
+        "sign": ""
     },
     "outline": {
+        "//title": "須至少一項，每項代表一行字；不同語系，數量應相同；因自適應，避免字行過長",
         "title": [
-            "THE POWER TO ADVANCE",
-            "JAPAN'S INFRASTRUCTURE"
+            "ASIA LARGEST LIVE CASINO",
+            " WITH 1200 SQ METERS OF ULTIMATE GAMING ENTERTAINMENT" 
         ],
-        "subtitle": "The Power to Evolve Japan's Social Infrastructure.",
+        "subtitle": "WORLD ENTERTAINMENT WAS FOUNDED IN 2020",
+        "//content": "是二維陣列，代表段落與其字行；不同語系，數量應相同；須至少一個段落，每個段落須至少一行字；因自適應，避免字行過長",
         "content": [
             [
-                "'Eyes' that make the space",
-                "closer and freer to the sky",
-                "that we want to deliver...",
-                "Some...",
-                "Some...",
-                "Some..."
+                "Industry elites and professionals from various fields gathered together",
+                "Create the most extraordinary and unique gambling experience for you",
+                "Build the largest live dealer base",
+                "The operating base is located in the Philippines",
+                "This is the only legal area in all of Asia",
+                "Located in the Southeast Asia, an excellent location for business investment"
             ],
             [
-                "We have created it with the hope",
-                "that people will be able",
-                "to work closely and be supported",
-                "in order to achieve economic growth",
-                "with a sense of satisfaction.",
-                "Drones are partners who bring safety and efficiency",
-                "to your business and give you time to improve the future."
+                "On-site environment",
+                "The largest live dealer base in Asia",
+                "Just in our building up to 12,000 square meters",
+                "A photography studio with TV station professional specifications",
+                "Flagship, Victoria's Secret, Macau, European, Asia Hall, Live Show",
+                "Over 120 gaming tables in total and VVIP private clubhouse",
+                "Provide VIP with honorable casino experience."
             ],
             [
-                "WE世界娛樂擁有超過101個遊戲版權",
-                "超過26款遊戲算法與數學模型、GLI國際驗證機構認可",
-                "遊戲軟件證書及三間上市公司軟件合作合同",
-                "服務對象主要為各地政府許可運營商",
-                "地區牌照運營商、大型度假村、實體娛樂鏈鎖店",
-                "大型在線運營平台，覆蓋全球23個國家、10個語言地區",
-                "公司願景在未來3-5年內改寫傳統電子遊戲規格與標準",
-                "成為新世代電子系統與遊戲內容的佼佼者"
+                "World Entertainment has over 101 game rights",
+                "Over 26 game algorithms and mathematical models, recognized by GLI Verification",
+                "Game software certificate and cooperation contract with three listed companies",
+                "The service targets are mainly local government licensed operators",
+                "Regional license operators, large resorts, physical entertainment chains",
+                "Large-scale online operation platform covering 23 countries and 10 language regions",
+                "The company's vision is to rewrite the standards of video games within the next 3-5 years",
+                "Become outstanding figure of the new generation of systems and game content"
             ],
             [
-                "A domestic drone optimized by combining all technologies",
-                "such as control, body, communication,",
-                "camera, propeller, and security.",
-                "Your new partner will be born.",
-                "Welcome"
+                "Keep you waiting",
+                "We have been waiting for a long time and are ready to go",
+                "Brand a new gaming experience",
+                "Take you into the just fun gaming hall",
+                "Welcome to World Entertainment"
             ]
         ]
     },
     "news": {
+        "//articles": "須至少一項，每項代表一篇文章，文章對應的圖片存放於 `src/assets/images/articles`；不同語系，數量應相同",
         "articles": [
             {
-                "date": "AUG. 1",
+                "date": "10.1",
                 "year": "2022",
-                "summary": "WE APP Coming Soon » Has a new interface and adds many other new functions",
-                "href": "introduce",
-                "image": "2021-12-07.png"
+                "summary": "WE APP will be launched soon, New interface revision, Chat system, Table collection, Follow the dealers and many other new features",
+                "href": "app",
+                "image": "20221001.jpg"
             },
             {
-                "date": "JUL. 1",
+                "date": "9.1",
                 "year": "2022",
-                "summary": "World Fishing Coming Soon » The latest 3D technology allows you to swim fast",
-                "href": "new-product",
-                "image": "2021-11-08.png"
+                "summary": "World Fishing is coming soon, The best 3D technology allows you to play quickly on different devices and is guaranteed to be an eye-opener",
+                "href": "fish",
+                "image": "20220901.jpg"
             },
             {
-                "date": "JUN. 1",
+                "date": "8.1",
                 "year": "2022",
-                "summary": "Fortune-God Baccarat Coming Soon » Lucky 5 × 5 bonus, double your prize when winning",
-                "href": "https://www.acsl.co.jp/drone-soten/news/2007",
-                "image": "2021-11-01.png"
+                "summary": "World Sports is Coming Soon, 2022 World Cup of football just around the corner, we offer you the best in live sports betting",
+                "href": "sport",
+                "image": "20220801.jpg"
+            },
+            {
+                "date": "7.1",
+                "year": "2022",
+                "summary": "God of Fortune Baccarat is Coming Soon, Lucky 5x5x5 [125x Bonus], up to 5 lucky cards per game, double your winnings",
+                "href": "rich-bac",
+                "image": "20220701.jpg"
             }
         ],
+        "//pages": "若 news.articles.href 非 http 開頭，將對應以下的頁面；content 支援基本的 Markdown 語法",
         "pages": {
-            "introduce": {
-                "date": "2022.8.1",
-                "title": "WE APP Coming Soon » Has a new interface and adds many other new functions",
-                "image": "2021-12-07.png",
+            "app": {
+                "date": "2022.10.1",
+                "title": "WE APP will be launched soon, New interface revision, Chat system, Table collection, Follow the dealers and many other new features",
+                "image": "20221001.jpg",
                 "content": [
-                    "**【Introduce】**",
-                    "1st paragraph — _The new interface has been revised_, adding a new chat system, collecting card tables, following dealers, and other unique functions.",
-                    "2nd paragraph — _The new interface has been revised_, adding a new chat system, collecting card tables, following dealers, and other unique functions.",
-                    "",
-                    "**【Others】**",
-                    "3nd paragraph — _The new interface has been revised_, adding a new chat system, collecting card tables, following dealers, and other unique functions."
+                    "NEW WE APP",
+                    "The WE team has spent a year developing the new app lobby and game interface, using native code to let you experience WE products on iOS / Android smoothly!",
+                    "In the new version of the APP interface we offer a richer lobby table display and the ability to follow WE official news at the same time, follow the beautiful dealers and lucky table collection. We have also improved the live baccarat betting interface and added new games such as Super Draw, Panda 8, Dragon 7, Super 6, Banker Dragon Bonus, Player Dragon Bonus. Up to 50 tables are available in the WE APP, including live, blockchain, lottery, sports and the industry's first multi-game betting feature.",
+                    "【New Baccarat interface】【Multi-table betting function】【New chat system】【Favourite tables】【Follow the dealers】【Good road betting】【Quick search】【My preferences】【Reward the dealers】【Automatic game quality check】【Automatic app authentication】"
+                    
                 ]
             },
-            "new-product": {
-                "date": "2022.7.1",
-                "title": "World Fishing Coming Soon » The latest 3D technology allows you to swim fast",
-                "image": "2021-11-08.png",
+            "fish": {
+                "date": "2022.9.1",
+                "title": "World Fishing is coming soon, The best 3D technology allows you to play quickly on different devices and is guaranteed to be an eye-opener",
+                "image": "20220901.jpg",
                 "content": [
-                    "**【World Fishing】**",
-                    "1st paragraph — The latest 3D technology lets you swim fast on different devices, which is guaranteed to be an eye-opener.",
-                    "",
-                    "**【Others】**",
-                    "2nd paragraph — The latest 3D technology lets you swim fast on different devices, which is guaranteed to be an eye-opener.",
-                    "3rd paragraph — The latest 3D technology lets you swim fast on different devices, which is guaranteed to be an eye-opener.",
-                    "4th paragraph — The latest 3D technology lets you swim fast on different devices, which is guaranteed to be an eye-opener."
+                    "World Fishing Machine New 3D Vision New Experience",
+                    "World Fishing is created by the industry's top video game team, using the latest game engine to calculate different 3D perspectives, so that the fishing game is no longer just a flat 2D game",
+                    "World Fishing is verified by third-party GLI, we provide up to 98% RTP feedback player mechanism, while you fire bullets fishing at the same time we have added a real-time Jackpot bonus mechanism, huge bonuses waiting for you to get",
+                    "【GLI International FairNess Verification】【3D Vision New Experience】【Multiple Launchers】【Instant Jackpot Treasure Chest Draw】【RTP98% Player Rebate】"
+                    
+                ]
+            },
+            "sport": {
+                "date": "2022.8.1",
+                "title": "World Sports is Coming Soon, 2022 World Cup of football just around the corner, we offer you the best in live sports betting",
+                "image": "20220801.jpg",
+                "content": [
+                    "World Sports is Coming soon » Betting while playing live action  when watching World Cup sport? That's right! WE is just fun",
+                    "The World Cup 2022 is just around the corner, the World Football League's top 32 teams have been drawn up, welcome to WE to watch the exciting World Cup matches",
+                    "we provide the most instant betting items whether it is a win, a bocce ball, a big or small ball we all have.",
+                    ""
+                    
+                ]
+            },
+            "rich-bac": {
+                "date": "2022.7.1",
+                "title": "God of Fortune Baccarat is Coming Soon, Lucky 5x5x5 [125x Bonus], up to 5 lucky cards per game, double your winnings",
+                "image": "20220701.jpg",
+                "content": [
+                    "God of Fortune Baccarat is Coming Soon » Up to 125x your winnings with WE Fortune Series - Baccarat products coming soon",
+                    "Continuing WE God of Fortuna Roulette and WE God of Fortuna SicBo, the WE game team has newly designed Fortuna Baccarat to allow you to get up to five additional lucky cards before each round of betting",
+                    " each with a maximum of 5x the winning bonus, a total of 125x the bet bonus big broadcast",
+                    ""
                 ]
             }
         }
     },
     "order": {
+        "//title": "須至少一項，每項代表一行字，建議兩項；不同語系，數量應相同；因自適應，避免字行過長",
         "title": [
-            "DEC 2021",
-            "RELEASE"
+            "2022 WE",
+            "Just fun"
         ],
+        "//subtitle": "須至少一項，每項代表一行字；不同語系，數量應相同；因自適應，避免字行過長",
         "subtitle": [
-            "Please Contact",
-            "Your Distributor Directly.",
-            ""
+            "WE credit version fully open API full support",
+            "Activate WE Live Product owning at the same time",
+            "A variety of popular games such as blockchain, lottery, fishing, sports and slots machines.",
+            "",
+            "[ WE Business Contact ]",
+            "webiz668&#64;gmail.com"
         ],
         "link": {
             "top": [
                 {
-                    "title": "PURCHASE FLOW",
-                    "href": "https://product.acsl.co.jp/flow/"
+                    "title": "Telegram",
+                    "href": "https://t.me/WE_businees"
                 }
             ],
             "bottom": [
                 {
-                    "title": "PRODUCT DETAIL",
-                    "href": "https://product.acsl.co.jp/product/post-369/"
+                    "title": "Instagram",
+                    "href": "https://www.instagram.com/accounts/login/?next=/worldent.official/"
                 },
                 {
-                    "title": "CONTACT US",
-                    "href": "https://www.acsl.co.jp/contact/"
+                    "title": "Facebook",
+                    "href": "https://www.facebook.com/worldentertainmentmanila/"
                 }
             ]
         }
     },
     "marquee": {
+        "//bottom": "須至少一項；不同語系，數量應相同",
         "bottom": [
-            "世界捕魚",
-            "世界杯",
-            "世界老虎機",
-            "世界彩",
-            "區塊鏈",
-            "世界真人",
-            "亞洲廳",
-            "澳門廳",
-            "泰國廳",
-            "真人秀",
-            "中國紅",
-            "維蜜廳"
+            "FISHING ARCADE",
+            "SPORTSBOOK",
+            "SLOT",
+            "LOTTORY",
+            "BLOCKCHAIN",
+            "LIVE DEALER",
+            "ASIA PALACE",
+            "MACAU PALACE",
+            "THAI PALACE",
+            "LIVE SHOW",
+            "CHINA RED",
+            "VICTORIA S"
         ],
-        "ring": "Live 真人 ｜ 區塊鏈 ｜ 彩票 ｜ 捕魚 ｜ 世界杯 ｜ 老虎機 ｜ "
+        "ring": "LIVE BLOCKCHAIN LOTTORY FISHING SPORT SLOT"
     },
     "button": {
         "fullMovie": {
@@ -164,11 +203,11 @@
             "border": "WORLD ENTERTAINMENT    WORLD ENTERTAINMENT",
             "borderSize": "8.5"
         },
-        "sound": "Toggle Sound",
-        "more": "MORE",
-        "load": "LOAD MORE",
+        "sound": "Music on and off",
+        "more": "View",
+        "load": "More",
         "close": "CLOSE",
-        "back": "BACK TO LIST"
+        "back": "BLACK"
     },
-    "rights": "© WORLD ENTERTAINMENT 2022 All Rights Reserved."
+    "rights": "COPYRIGHT © WORLD ENTERTAINMENT 2022"
 }
