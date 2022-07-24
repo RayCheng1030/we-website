@@ -99,5 +99,9 @@
 2. 若網址帶有查詢參數 (`#/?lang=zht` 或 `#/?lang=en`)，將強制使用指定語系的文本
     - 若指定語系的文本不存在 (如：`ja`、`zh`、`zh-TW`、`en_US` 等)，將直接使用預設的繁體中文文本 (`zht.json`)
 
+3. 開放社交關係標籤 (Open Graph Meta Tags)
+    - `/`：根目錄顯示繁體中文描述 (e.g. http://www.rainmaker96.url.tw/)
+    - `/en`：目錄顯示英文描述 (e.g. http://www.rainmaker96.url.tw/en)，並自動轉址為 `#/?lang=en` (e.g. http://www.rainmaker96.url.tw/#/?lang=en)
+
 ## References
 * https://www.acsl.co.jp/drone-soten/

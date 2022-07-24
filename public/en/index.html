@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,35 +17,17 @@
         <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.title %>">
         <meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="<%= htmlWebpackPlugin.options.url %>">
+        <meta property="og:url" content="<%= htmlWebpackPlugin.options.url %>en">
         <meta property="og:image" content="<%= htmlWebpackPlugin.options.url %>og-image.jpg">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="theme-color" content="#050711">
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com" rel="preconnect">
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&amp;display=swap" rel="stylesheet">
-
-        <!-- Libraries -->
-        <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.url %>styles/main.css?v=4">
-        <link rel="stylesheet" href="<%= htmlWebpackPlugin.options.url %>styles/pace-theme-default.min.css?v=4" data-reload>
     </head>
     <body id="pIndex">
         <noscript>
             <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
         </noscript>
         <script>
-            window.onerror = function (message, source, lineno, colno, error) {
-                lineno === 0 && colno === 0 && error === null && window.location.reload();
-            }
-
-            // Check the language
-            if (window.location.hash === "#/")
-                localStorage.setItem("lang", navigator.language.startsWith("zh") ? "zht" : "en");
-
-            if (localStorage.getItem("lang") === "en")
-                document.title = "<%= htmlWebpackPlugin.options.i18n.en.title %>";
+            window.location.replace("<%= htmlWebpackPlugin.options.url %>#/?lang=en");
         </script>
         <div id="app"></div>
         <!-- built files will be auto injected -->
