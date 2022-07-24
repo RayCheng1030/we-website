@@ -90,5 +90,14 @@
 10. Logo 的顯示與隱藏
     - 可修改 (`src/models/store/index.ts`) 的屬性 (`state.headerLogoVisible`)，若為 `true` (預設) 為顯示，否則 `false` 為隱藏
 
+## Locale
+1. 若網址未帶有查詢參數 (`#/?lang=`)，會自動觸發檢查瀏覽器的語系
+    - 當瀏覽器的語系是中文 (不論繁、簡)，皆顯示繁體中文文本 (`zht.json`)
+    - 當瀏覽器的語系是非中文，皆顯示英文文本 (`en.json`)
+    - 因考量網址的複雜性，不論自動切換至哪個語系，皆不轉址或改變網址
+
+2. 若網址帶有查詢參數 (`#/?lang=zht` 或 `#/?lang=en`)，將強制使用指定語系的文本
+    - 若指定語系的文本不存在 (如：`ja`、`zh`、`zh-TW`、`en_US` 等)，將直接使用預設的繁體中文文本 (`zht.json`)
+
 ## References
 * https://www.acsl.co.jp/drone-soten/

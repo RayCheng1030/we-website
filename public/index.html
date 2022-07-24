@@ -42,6 +42,10 @@
             window.onerror = function (message, source, lineno, colno, error) {
                 lineno === 0 && colno === 0 && error === null && window.location.reload();
             }
+
+            // Check the language
+            if (window.location.hash === "#/")
+                localStorage.setItem("lang", navigator.language.startsWith("zh") ? "zht" : "en");
         </script>
         <div id="app"></div>
         <!-- built files will be auto injected -->
