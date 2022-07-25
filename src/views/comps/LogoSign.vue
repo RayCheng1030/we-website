@@ -1,5 +1,5 @@
 <template>
-    <a :class="`${ props.target }-logo`" href="/">
+    <a :class="`${ props.target }-logo`" :href="href">
         <p>
             <img :class="`${ props.target }-logo-image sign-logo-image`" :src="require(`@/assets/images/sign.png`)" alt="Sign" loading="lazy">
         </p>
@@ -7,9 +7,10 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
+import { computed, defineProps } from "vue";
 
 const props = defineProps<{ target: string }>();
+const href = computed(() => `/#/?lang=${ localStorage.getItem("lang") }`);
 </script>
 
 <style lang="scss">
