@@ -1,6 +1,6 @@
 <template>
     <div class="cNews" data-news>
-        <component class="cNews-link" :is="props.article.href.startsWith(`http`) ? `a` : `router-link`" :href="props.article.href" :to="`/article/${ props.article.href }`">
+        <component class="cNews-link" :is="props.article.href.startsWith(`http`) ? `a` : `router-link`" :href="props.article.href" :to="`/article/${ props.article.href }`" @click="onLink">
             <div class="cNews-day">
                 <p class="cNews-day-month">{{ props.article.date }}</p>
                 <p class="cNews-day-year">{{ props.article.year }}</p>
@@ -23,6 +23,12 @@ type Article = {
 };
 
 const props = defineProps<{ article: Article }>();
+
+const onLink = () => {
+    const bgm = document.querySelector<HTMLAudioElement>("#bgm");
+
+    localStorage.setItem("autoplay", `${ new Date().getTime() },${ bgm?.currentTime || 0 },${ bgm?.paused ? 1 : 0 }`);
+};
 </script>
 
 <style lang="scss">

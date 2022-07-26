@@ -1,26 +1,13 @@
 <template>
-    <button type="button" :class="`site-volume ${ state.isSoundPlaying && `is-playing` }`" :title="$t(`button.sound`)" @click="onToggleSound()">
-        <audio ref="sound" :src="require(`@/assets/sounds/sound.mp3`)"></audio>
+    <button type="button" :class="`site-volume ${ state.isSoundPlaying && `is-playing` }`" :title="$t(`button.sound`)" @click="commit(`toggleSound`)">
         <span class="pulsing-ui"></span>
     </button>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from "vue";
 import store from "@/models/store";
 
 const { state, commit } = store;
-const sound = ref(null as HTMLAudioElement | null);
-
-const onToggleSound = () => {
-    commit(`toggleSound`);
-
-    state.isSoundPlaying ? sound.value?.play() : sound.value?.pause();
-};
-
-watch(() => state.isVideoPlaying, value => {
-    sound.value && (sound.value.muted = value);
-});
 </script>
 
 <style lang="scss">
