@@ -177,6 +177,16 @@
                     "title": "Facebook",
                     "href": "https://www.facebook.com/worldentertainmentmanila/"
                 }
+            ],
+            "social": [
+                {
+                    "title": "whatsapp.svg",
+                    "href": "https://api.whatsapp.com/send?phone=+639691105678&text=Hello"
+                },
+                {
+                    "title": "telegram.svg",
+                    "href": "https://t.me/WEG5678"
+                }
             ]
         }
     },
