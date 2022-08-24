@@ -780,7 +780,7 @@
                     key: "finish",
                     value: function() {
                         var t = this;
-                        /*this.isLoadDone &&*/ this.isStartDone && (y.ZP.delayedCall(.5, (function() {
+                        this.isLoadDone && this.isStartDone && (y.ZP.delayedCall(.5, (function() {
                             t.motionCatches[t.motionCatchIndex - 1].hide(),
                             t.el || (t.el = document.querySelector(".cLoading")),
                             t.el.addEventListener("transitionend", (function() {

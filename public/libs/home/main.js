@@ -46,7 +46,8 @@
                     }
                     ))
                 }
-                ))
+                )),
+                Pace.start()
             }
             function l(t) {
                 s.push(t)

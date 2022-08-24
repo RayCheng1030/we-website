@@ -25,11 +25,17 @@
     <template v-else>
         <div class="full-screen">
             <img id="img-logo" :src="require(`@/assets/images/logo-large.png`)">
-            <button id="btn-enter" @click="commit(`enterPage`)">{{ $t(`button.enter`) }}</button>
+            <button v-if="assets.progress >= 1" id="btn-enter" @click="commit(`enterPage`)">{{ $t(`button.enter`) }}</button>
+            <div v-else id="loading-bar">
+                <div class="progress">{{ (assets.progress * 100).toFixed(1) }}%</div>
+                <div class="bar-bg">
+                    <div class="bar" :style="{ width: `${ assets.progress * 100 }%` }"></div>
+                </div>
+            </div>
         </div>
         <audio :style="{ visibility: `hidden` }" :src="require(`@/assets/sounds/sound.mp3`)" muted autoplay preload="auto"></audio>
         <video :style="{ visibility: `hidden`, height: `1px` }" :src="require(`@/assets/videos/background.mp4`)" muted autoplay preload="auto"></video>
-        <video :style="{ visibility: `hidden`, height: `1px` }" :src="require(`@/assets/videos/full.mp4`)" muted autoplay preload="auto"></video>
+        <!-- <video :style="{ visibility: `hidden`, height: `1px` }" :src="require(`@/assets/videos/full.mp4`)" muted autoplay preload="auto"></video> -->
     </template>
 </template>
 
@@ -50,6 +56,9 @@ const { state, commit } = store;
 const route = useRoute();
 const sound = ref(null as HTMLAudioElement | null);
 
+const assets = reactive({
+    progress: 0,
+});
 const opening = reactive({
     pending: false as NonNullable<typeof window["openingPending"]>,
     status: false as NonNullable<typeof window["openingStatus"]>,
@@ -64,15 +73,17 @@ const isPageEntered = computed(() => {
     const value = state.isPageEntered || route.name !== "home";
     if (!value && route.name !== undefined) {
         load.any([
+            ...["vendor", "pace.min", "index", "main"].map(lib => ({ url: `./libs/home/${ lib }.js?v=4`, type: "binary" })),
             ...new Array(10).fill(null).map((v, i) => require(`@/assets/images/shows/photo-${ `${ i + 1 }`.padStart(2, "0") }.jpg`)),
             ...new Array(5).fill(null).map((v, i) => require(`@/assets/images/outline/bg-${ `${ i + 1 }`.padStart(2, "0") }.png`)),
             ...new Array(6).fill(null).map((v, i) => require(`@/assets/images/gallery/photo-${ `${ i + 1 }`.padStart(2, "0") }.jpg`)),
             require(`@/assets/images/outline/main.jpg`),
             require(`@/assets/images/outline/main-mobile.jpg`),
-            { url: require(`@/assets/sounds/sound.mp3`), type: "binary" },
-            { url: require(`@/assets/videos/background.mp4`), type: "binary" },
-            { url: require(`@/assets/videos/full.mp4`), type: "binary" },
+            // { url: require(`@/assets/sounds/sound.mp3`), type: "binary" },
+            // { url: require(`@/assets/videos/background.mp4`), type: "binary" },
+            // { url: require(`@/assets/videos/full.mp4`), type: "binary" },
         ], ({ target, progress, error }) => {
+            assets.progress = progress;
             console.debug(`Assets Loaded: ${ (progress * 100).toFixed(1) }% - ${ typeof target === "string" ? target : target.url }`);
             error && console.error(error)
         });
@@ -181,6 +192,25 @@ document.body.addEventListener("touchend", () => {
 
             border-color: #eeeeee;
             background-color: #eeeeee;
+        }
+    }
+    #loading-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        height: 42px;
+
+        .bar-bg {
+            width: 220px;
+            height: 4px;
+            background: rgba(238, 238, 238, 0.2);
+
+            .bar {
+                height: 100%;
+                background: #eeeeee;
+            }
         }
     }
 }
