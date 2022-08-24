@@ -71,6 +71,7 @@ onMounted(async () => {
 
             head.appendChild(script);
         });
+        console.debug(`Scripts Loaded: ./libs/article/${ lib }.js?v=4`);
     }
 });
 </script>
