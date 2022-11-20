@@ -19,7 +19,7 @@
         </p>
         <div class="lOutline-text" data-el data-scroll data-scroll-call="lOutline-text-p">
             <p v-for="(paragraph, i) in content" :key="i" class="lOutline-text-p">
-                <span v-for="(text, j) in paragraph" :key="j" class="full-width">{{ text }}</span>
+                <span v-for="(text, j) in paragraph" :key="j" class="full-width line-break">{{ text }}</span>
             </p>
         </div>
         <picture v-for="(photo, i) in photos" :key="i">
@@ -55,6 +55,11 @@ const content = computed(() => getI18nList(`outline.content`, `0`).map((v, i) =>
             @include full-width;
         }
     }
+}
+
+.line-break {
+    white-space: normal;
+    line-height: 150%;
 }
 
 @include desktop {
