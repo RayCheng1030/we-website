@@ -9,9 +9,9 @@
     "header": {
         "//title": "須至少一項；不同語系，數量應相同",
         "title": [
-            "WE",
-            "ABSOLUTE",
-            "ENJOYMENT"
+            "WORLD BOXING",
+            "NAMING",
+            "SPONSOR"
         ],
         "subtitle": "PAGCOR, MGA, GLI INTERNATIONAL FAIRNESS MECHANISM CERTIFICATE",
         "sign": ""
@@ -65,6 +65,13 @@
         "//articles": "須至少一項，每項代表一篇文章，文章對應的圖片存放於 `src/assets/images/articles`；不同語系，數量應相同",
         "articles": [
             {
+                "date": "12.11",
+                "year": "2022",
+                "summary": "WE World Entertainment's exclusive title, world boxing champion Manny Pacquiao VS Korea Bruce Lee DK YOO South Korea's first exhibition match",
+                "href": "boxing",
+                "image": "20221211.jpg"
+            },
+            {
                 "date": "10.1",
                 "year": "2022",
                 "summary": "WE APP will be launched soon, New interface revision, Chat system, Table collection, Follow the dealers and many other new features",
@@ -95,6 +102,18 @@
         ],
         "//pages": "若 news.articles.href 非 http 開頭，將對應以下的頁面；content 支援基本的 Markdown 語法",
         "pages": {
+            "boxing": {
+                "date": "2022.12.11",
+                "title": "World Entertainment title sponsor for world boxing champion Manny Pacquiao VS Korean Bruce Lee DK YOO South Korea's first exhibition match",
+                "image": "20221211.jpg",
+                "content": [
+                    "World champion Pacquiao's 2022 comeback first exhibition match is about to debut in Seoul, South Korea on December 11",
+                    "World Entertainment was a title sponsor this competition and designed the World Boxing room for this boxing event.",
+                    "When you play the WE live game, you can challenge the number of exciting winning streaks.",
+                    "【Philippine Legendary Boxer-Pacquiao】【Korea Bruce Lee-DK YOO】【Fight K】"
+                    
+                ]
+            },
             "app": {
                 "date": "2022.10.1",
                 "title": "WE APP will be launched soon, New interface revision, Chat system, Table collection, Follow the dealers and many other new features",
@@ -147,8 +166,8 @@
     "order": {
         "//title": "須至少一項，每項代表一行字，建議兩項；不同語系，數量應相同；因自適應，避免字行過長",
         "title": [
-            "2022 WE",
-            "ABSOLUTE ENJOYMENT"
+            "WORLD ENTERTAINMENT",
+            "CREATE MASTERPIECE OF LIVE"
         ],
         "//subtitle": "須至少一項，每項代表一行字；不同語系，數量應相同；因自適應，避免字行過長",
         "subtitle": [

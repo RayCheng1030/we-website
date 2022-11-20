@@ -31,7 +31,7 @@
                 <div class="bar-bg">
                     <div class="bar" :style="{ width: `${ assets.progress * 100 }%` }"></div>
                 </div>
-            </div>
+            </div> 
         </div>
         <audio :style="{ visibility: `hidden` }" :src="require(`@/assets/sounds/sound.mp3`)" muted autoplay preload="auto"></audio>
         <video :style="{ visibility: `hidden`, height: `1px` }" :src="require(`@/assets/videos/background.mp4`)" muted autoplay preload="auto"></video>
