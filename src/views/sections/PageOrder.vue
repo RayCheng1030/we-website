@@ -25,7 +25,7 @@
             <ContactLink v-for="(link, i) in linkBottom" :key="i" :title="link.title" :href="link.href" />
         </div>
         <div class="lOrder-video">
-            <video class="lOrderVideo" :src="require(`@/assets/videos/background.mp4`)" muted loop playsinline autoplay data-el data-scroll data-scroll-speed="2" data-scroll-call="lOrderVideo" data-scroll-repeat></video>
+            <video class="lOrderVideo" :src="`./assets/videos/background${state.useMobileVideo ? `M` : ``}.mp4`" muted loop playsinline autoplay data-el data-scroll data-scroll-speed="2" data-scroll-call="lOrderVideo" data-scroll-repeat></video>
         </div>
     </div>
 </template>
@@ -34,9 +34,11 @@
 import { computed } from "vue";
 import { getI18nList } from "@/models/util";
 import { useI18n } from "vue-i18n";
+import store from "@/models/store";
 
 import ContactLink from "@/views/comps/ContactLink.vue";
 
+const { state } = store;
 const { t } = useI18n();
 
 const title = computed(() => getI18nList(`order.title`));

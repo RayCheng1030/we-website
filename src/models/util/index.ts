@@ -24,6 +24,9 @@ export function getI18nList(path: string, suffix?: string) {
 export function isMobile() {
     return !!navigator.userAgent.match(/AppleWebKit.*Mobile.*/);
 }
+export function isLandscape() {
+    return window.matchMedia(`(min-aspect-ratio: 13 / 9)`).matches || window.matchMedia(`(orientation: landscape)`).matches;
+}
 
 export function randomInt(min: number, max: number) {
     return ((Math.random() + 1) * (max - min) + min) >> 0;
@@ -31,4 +34,13 @@ export function randomInt(min: number, max: number) {
 
 export function pad(num: number, length: number) {
     return `${ num }`.padStart(length, "0");
+}
+
+export function isExisted(url: string) {
+    const request = new XMLHttpRequest();
+
+    request.open("HEAD", url, false);
+    request.send();
+
+    return request.status !== 404;
 }

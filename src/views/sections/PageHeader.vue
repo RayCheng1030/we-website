@@ -20,7 +20,7 @@
             </div>
         </div>
         <BottomMarquee target="lHero" :texts="marquee" />
-        <video class="lHero-video" ref="video" :src="require(`@/assets/videos/background.mp4`)" :poster="require(`@/assets/images/video-cover.jpg`)" muted loop playsinline autoplay data-ref></video>
+        <video class="lHero-video" ref="video" :src="`./assets/videos/background${state.useMobileVideo ? `M` : ``}.mp4`" :poster="require(`@/assets/images/video-cover.jpg`)" muted loop playsinline autoplay data-ref></video>
         <div class="lHeroMouseStalker" data-el="cMouseStalker">
             <div class="lHeroMouseStalker-text" data-ref="cMouseStalker-text" :style="`left: calc(50% + ${ $t(`button.fullMovie.textLeft`) }px)`">{{ $t("button.fullMovie.text") }}</div>
             <div class="lHeroMouseStalker-shape -normal" data-ref="cMouseStalker-shapeNormal" style="display: none" />

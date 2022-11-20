@@ -34,7 +34,8 @@
             </div> 
         </div>
         <audio :style="{ visibility: `hidden` }" :src="require(`@/assets/sounds/sound.mp3`)" muted autoplay preload="auto"></audio>
-        <video :style="{ visibility: `hidden`, height: `1px` }" :src="require(`@/assets/videos/background.mp4`)" muted autoplay preload="auto"></video>
+        <video :style="{ visibility: `hidden`, height: `1px` }" :src="`./assets/videos/background.mp4`" muted autoplay preload="auto"></video>
+        <video :style="{ visibility: `hidden`, height: `1px` }" :src="`./assets/videos/backgroundM.mp4`" muted autoplay preload="auto"></video>
         <!-- <video :style="{ visibility: `hidden`, height: `1px` }" :src="require(`@/assets/videos/full.mp4`)" muted autoplay preload="auto"></video> -->
     </template>
 </template>
@@ -156,6 +157,9 @@ document.body.addEventListener("touchend", () => {
     if (state.isSoundPlaying && sound.value?.paused)
         sound.value.play();
 });
+
+window.addEventListener("resize", () => commit("updateMobileVideo"));
+window.addEventListener("orientationchange", () => commit("updateMobileVideo"));
 </script>
 
 <style lang="scss">

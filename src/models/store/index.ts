@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+import { isExisted, isLandscape, isMobile } from "@/models/util";
 
 export default createStore({
     modules: {
@@ -8,6 +9,7 @@ export default createStore({
         isSoundPlaying: false,
         isVideoPlaying: false,
         isPageEntered: false,
+        useMobileVideo: checkMobileVideo(),
     },
     getters: {
     },
@@ -19,7 +21,14 @@ export default createStore({
             state.isPageEntered = true;
             state.isSoundPlaying = true;
         },
+        updateMobileVideo(state) {
+            state.useMobileVideo = checkMobileVideo();
+        }
     },
     actions: {
     },
 });
+
+function checkMobileVideo() {
+    return isMobile() && !isLandscape() && isExisted("./assets/videos/backgroundM.mp4");
+}
