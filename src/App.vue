@@ -1,5 +1,5 @@
 <template>
-    <audio ref="sound" volume="0.5" id="bgm" :src="require(`@/assets/sounds/sound.mp3`)"></audio>
+    <audio ref="sound" id="bgm" :src="require(`@/assets/sounds/sound.mp3`)" @play="($event.target as HTMLAudioElement).volume = 0.5"></audio>
     <template v-if="isPageEntered">
         <div class="cBase" data-menu-hidden data-transition-hidden>
             <div data-scroll-container>

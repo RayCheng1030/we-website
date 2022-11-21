@@ -1,7 +1,7 @@
 <template>
     <div class="cModal lVideo" data-modal="lVideo" data-el>
         <div class="cModal-content lVideo-content" ref="video" data-modal-content data-ref>
-            <video class="lVideo-video" :data-src="require(`@/assets/videos/full.mp4`)" controls volume="1" preload="none" data-ref></video>
+            <video ref="videoEl" class="lVideo-video" :data-src="require(`@/assets/videos/full.mp4`)" controls preload="none" data-ref @play="($event.target as HTMLVideoElement).volume = 1"></video>
         </div>
         <div class="cModal-close lVideo-close" data-modal-close aria-label="CLOSE">
             <div class="lVideo-close-side -top"></div>
