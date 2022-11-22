@@ -6,7 +6,7 @@ const globalSassFiles = [
 const i18n = {
     zht: {
         title: "WE世界娛樂官方形象網站",
-        description: "WE世界娛樂、政府監督下、公平有保障。持有菲律賓、馬耳他博彩牌照、GLI國際公正機制證書，世界娛樂就是好玩！",
+        description: "WE世界娛樂 2022世界拳王-帕奎奧 南韓首場表演賽獨家冠名。世界娛樂-現場之最 World Entertainment Create Masterpiece of Live",
     },
     en: {
         title: "WORLD ENTERTAINMENT",
